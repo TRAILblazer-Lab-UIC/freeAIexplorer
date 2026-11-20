@@ -119,14 +119,47 @@ input[type="checkbox"] { width: 20px; height: 20px; accent-color: var(--brand); 
 .why-cta { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px; margin: 14px 0 0; }
 .btn-primary { background: var(--brand); color: var(--brand-ink); border-color: var(--brand); text-decoration: none; font-weight: 700; }
 .btn-primary:hover { filter: brightness(1.08); }
-@media (max-width: 640px) {
-  .compare thead { display: none; }
-  .compare, .compare tbody, .compare tr, .compare th, .compare td { display: block; width: 100%; }
-  .compare tr { border-bottom: 2px solid var(--border); }
-  .compare tbody td::before { display: block; font-size: .85rem; font-weight: 700; }
+@media (max-width: 700px) {
+  .table-wrap { overflow: visible; }
+  .compare, .compare thead, .compare tbody, .compare tr, .compare tbody th, .compare tbody td { display: block; width: 100%; }
+  .compare { border: 0; background: transparent; }
+  .compare thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+  .compare tbody tr { background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius); margin: 0 0 12px; overflow: hidden; }
+  .compare tbody th { width: 100%; font-size: 1.05rem; padding: 10px 14px; background: var(--surface-2); border-bottom: 1px solid var(--border); }
+  .compare tbody td { padding: 10px 14px; border-bottom: 0; }
+  .compare tbody td + td { border-top: 1px solid var(--border); }
+  .compare tbody td::before { display: block; font-size: .8rem; font-weight: 700; text-transform: uppercase; letter-spacing: .04em; margin-bottom: 2px; }
   .compare tbody td:nth-child(2)::before { content: "Company cloud AI"; color: var(--r-tx); }
-  .compare tbody td:nth-child(3)::before { content: "AI that stays in your school"; }
+  .compare tbody td:nth-child(3)::before { content: "AI that stays in your school"; color: var(--g-tx); }
 }
+
+
+.beginner-row { padding-top: 20px; }
+.beginner-row .beginner-btn { margin-top: 0; }
+
+/* Tool finder section: visually separate from the informational bands above */
+.browse { margin-top: 28px; border-top: 6px solid var(--brand); }
+.browse-head { background: var(--brand); color: var(--brand-ink); padding: 18px 0 16px; }
+.browse-head h2 { margin: 0 0 4px; font-size: clamp(1.5rem, 1.2rem + 1.2vw, 2.1rem); color: var(--brand-ink); }
+.browse-kicker { margin: 0; text-transform: uppercase; letter-spacing: .08em; font-size: .85rem; font-weight: 700; color: var(--brand-ink); }
+.browse-intro { margin: 0; max-width: 70ch; color: var(--brand-ink); }
+
+/* Type of technology buttons */
+.tech-row { padding-top: 14px; }
+.tech-pick { border: 0; margin: 0; padding: 0; }
+.tech-pick legend { font-weight: 700; font-size: 1.05rem; margin-bottom: 8px; padding: 0; }
+.tech-buttons { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px; max-width: 760px; }
+.tech-btn {
+  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px; min-height: 92px;
+  font: inherit; font-weight: 700; background: var(--bg); color: var(--text); border: 2px solid var(--border);
+  border-radius: 14px; cursor: pointer; padding: 10px 6px;
+}
+.tech-btn:hover { border-color: var(--brand); }
+.tech-icon { width: 40px; height: 40px; color: var(--brand); }
+.tech-btn[aria-pressed="true"] { background: var(--brand); color: var(--brand-ink); border-color: var(--brand); }
+.tech-btn[aria-pressed="true"] .tech-icon { color: var(--brand-ink); }
+.tech-btn[aria-pressed="true"] span::after { content: " \2713"; }
+@media (max-width: 520px) { .tech-buttons { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 
 /* Explorer layout */
 .search-row { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px; margin: 20px 0 12px; }

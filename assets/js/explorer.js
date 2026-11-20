@@ -131,6 +131,39 @@
     });
   }
 
+  /* ---------- big type-of-technology buttons (synced with the tt facet) ---------- */
+  function buildTechButtons() {
+    var box = $('tech-buttons');
+    if (!box) return;
+    ['ai', 'computing', 'robotics', 'unplugged'].forEach(function (v) {
+      if (!labels.tt[v]) return;
+      var b = document.createElement('button');
+      b.type = 'button';
+      b.className = 'tech-btn';
+      b.dataset.tt = v;
+      b.setAttribute('aria-pressed', 'false');
+      b.appendChild(svgIcon(v, 'tech-icon'));
+      var s = document.createElement('span');
+      s.textContent = labels.tt[v];
+      b.appendChild(s);
+      b.addEventListener('click', function () {
+        var arr = state.f.tt || [];
+        arr = arr.indexOf(v) === -1 ? arr.concat([v]) : arr.filter(function (x) { return x !== v; });
+        state.f.tt = arr;
+        var cb = $('f-tt-' + v);
+        if (cb) cb.checked = arr.indexOf(v) !== -1;
+        state.shown = PAGE;
+        render();
+      });
+      box.appendChild(b);
+    });
+  }
+  function syncTechButtons() {
+    document.querySelectorAll('.tech-btn').forEach(function (b) {
+      b.setAttribute('aria-pressed', (state.f.tt || []).indexOf(b.dataset.tt) !== -1 ? 'true' : 'false');
+    });
+  }
+
   /* ---------- matching ---------- */
   function norm(s) { return String(s || '').toLowerCase(); }
   function textMatch(it, words) {
@@ -208,6 +241,7 @@
     els.note.hidden = !notes.length;
     els.note.textContent = notes.join(' ');
     els.beg.setAttribute('aria-pressed', state.beg ? 'true' : 'false');
+    syncTechButtons();
     window.FAE.postHeight();
   }
   function updateCounts(words) {
@@ -318,6 +352,7 @@
         data = j.items; labels = j.labels; icons = j.icons || {};
         readHash();
         buildFacets();
+        buildTechButtons();
         wire();
         render();
       })
