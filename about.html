@@ -32,10 +32,11 @@
 <h2 id="how-we-built-it">How we built it</h2>
 <p>The project ran in three stages.</p>
 <ol>
-<li>Research. AI research agents searched the web in four rounds. They looked for software, hardware, kits, lessons, and unplugged activities. Each item got a fact sheet with cited sources. Search stopped after four rounds. The last round still found about 7 percent new items, a little above the planned 5 percent stopping point.</li>
+<li>Research. AI research agents searched the web in four rounds. They looked for software, hardware, kits, lessons, and unplugged activities. Each item got a fact sheet with cited sources. We stopped searching once new searches began producing diminishing returns.</li>
 <li>Classification. Python rules sorted each item by facts such as cost, internet need, and where student data goes. AI agents scored judgment calls such as ease of use. A second AI coder scored a random sample on its own. We measured how often the two agreed and tightened the rules until agreement passed our target.</li>
 <li>Writing. AI agents wrote each tool page from the fact sheets. A style checker reviewed every page.</li>
 </ol>
+<p>Python scripts refereed the whole research and classification process. They listed every tool up front and tracked each one through every step. They checked each result against the rules before it counted. That made sure every tool was considered on its own. The process never relied on an AI's memory to follow the research steps.</p>
 <h2 id="what-the-privacy-labels-mean">What the privacy labels mean</h2>
 <ul>
 <li>Stays on the device. The tool runs on the computer, tablet, or robot. Student work stays there.</li>
