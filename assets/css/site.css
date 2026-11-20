@@ -528,3 +528,26 @@ body { line-height: 1.65; }
 }
 :root[data-theme="dark"] .logos .logo-tb img { background: #ffffff; border-radius: 10px; padding: 4px 8px; }
 :root[data-theme="dark"] .logos .logo-uic img { background: #ffffff; border-radius: 50%; }
+
+/* Hero illustration */
+.hero-grid { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); gap: 24px 40px; align-items: center; }
+.hero-visual { display: flex; justify-content: center; }
+.hero-art { width: 100%; max-width: 420px; height: auto; }
+.ha-ring { fill: none; stroke: var(--border); stroke-width: 2; stroke-dasharray: 3 8; stroke-linecap: round; }
+.ha-school { fill: var(--surface); stroke: var(--brand); stroke-width: 3; stroke-linejoin: round; }
+.ha-roof, .ha-ground { fill: none; stroke: var(--brand); stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; }
+.ha-screen { fill: var(--bg); stroke: var(--text); stroke-width: 3; }
+.ha-base { fill: var(--text); }
+.ha-bot { fill: var(--b-bg); stroke: var(--brand); stroke-width: 2.5; }
+.ha-eye { fill: var(--brand); }
+.ha-botline { fill: none; stroke: var(--brand); stroke-width: 2.5; stroke-linecap: round; }
+.ha-spark { fill: var(--accent); }
+.ha-ok { fill: var(--g-tx); }
+.ha-okmark { fill: none; stroke: var(--bg); stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+.ha-chip { fill: var(--bg); stroke: var(--border); stroke-width: 2; }
+.ha-icon { fill: none; stroke: var(--brand); stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+@media (max-width: 860px) {
+  .hero-grid { grid-template-columns: 1fr; }
+  .hero-visual { order: -1; justify-content: flex-start; }
+  .hero-art { max-width: 200px; }
+}
