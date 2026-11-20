@@ -175,7 +175,21 @@
     }
     return score;
   }
+  /* Step 1 (grade, subject, devices) filters as soon as any one is chosen. */
+  function passesClass(it) {
+    var n = state.needs;
+    if (n.grade && (it.gr || []).indexOf(n.grade) === -1) return false;
+    if (n.subject && (it.sub || []).indexOf(n.subject) === -1) return false;
+    if (n.device) {
+      var pf = it.pf || [];
+      if (n.device === 'paper') { if (pf.indexOf('paper') === -1 && (it.rt || []).indexOf('unplugged') === -1 && (it.tt || []).indexOf('unplugged') === -1) return false; }
+      else if (n.device === 'chromebook') { if (pf.indexOf('chromebook') === -1 && pf.indexOf('browser') === -1) return false; }
+      else if (pf.indexOf(n.device) === -1 && pf.indexOf('browser') === -1) return false;
+    }
+    return true;
+  }
   function passes(it, skip) {
+    if (!passesClass(it)) return false;
     if (state.beg && !it.beg) return false;
     if (state.local && it.priv.indexOf('red') !== -1) return false;
     if (state.hideUnv && it.priv.indexOf('unverified') !== -1) return false;
@@ -237,6 +251,11 @@
     var notes = [];
     if (state.local) notes.push('Tools that send student data to a company are hidden.');
     if (state.beg) notes.push('Showing tools for AI beginners.');
+    var cls = [];
+    if (state.needs.grade) cls.push(labels.gr[state.needs.grade] || state.needs.grade);
+    if (state.needs.subject && !(state.f.sub && state.f.sub.length)) cls.push(labels.sub[state.needs.subject] || state.needs.subject);
+    if (state.needs.device) cls.push({ chromebook: 'Chromebooks', ipad: 'iPads', windows: 'Windows computers', mac: 'Macs', paper: 'No devices' }[state.needs.device] || state.needs.device);
+    if (cls.length) notes.push('Showing tools for: ' + cls.join(', ') + '.');
     if (state.f.sub && state.f.sub.length) notes.push('Subject: ' + state.f.sub.map(function (v) { return labels.sub[v] || v; }).join(', ') + '. Use More filters to change it.');
     els.note.hidden = !notes.length;
     els.note.textContent = notes.join(' ');
@@ -266,7 +285,7 @@
     return b;
   }
   function gradeRange(gr) {
-    var order = ['k2', 'g35', 'g68', 'g912'], names = { k2: 'K', g35: '3', g68: '6', g912: '9' }, ends = { k2: '2', g35: '5', g68: '8', g912: '12' };
+    var order = ['k2', 'g35', 'g68', 'g912'], names = { k2: 'PreK', g35: '3', g68: '6', g912: '9' }, ends = { k2: '2', g35: '5', g68: '8', g912: '12' };
     var idx = gr.map(function (g) { return order.indexOf(g); }).filter(function (i) { return i >= 0; }).sort();
     if (!idx.length) return '';
     return 'Grades ' + names[order[idx[0]]] + '-' + ends[order[idx[idx.length - 1]]];
@@ -375,6 +394,10 @@
       if (state.needs[k]) { sel.value = state.needs[k]; if (['internet', 'budget', 'privacy', 'comfort'].indexOf(k) !== -1) $('more-options').open = true; }
       sel.addEventListener('change', function () {
         state.needs[k] = sel.value;
+        if (k === 'subject') {  /* the step 1 subject replaces any subject chosen from a tile or filter */
+          state.f.sub = [];
+          document.querySelectorAll('#facets input[data-facet="sub"]').forEach(function (cb) { cb.checked = false; });
+        }
         if (sel.value) state.sort = 'match';
         so.value = state.sort;
         state.shown = PAGE;

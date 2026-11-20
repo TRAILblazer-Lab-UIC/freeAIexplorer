@@ -7,9 +7,9 @@
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <title>How We Built This Site | Free AI Explorer</title>
 <meta name="description" content="How We Built This Site">
-<link rel="stylesheet" href="assets/css/site.css?v=5f4268e5ab">
+<link rel="stylesheet" href="assets/css/site.css?v=4bd5ccac50">
 <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
-<script src="assets/js/common.js?v=5f4268e5ab" defer></script>
+<script src="assets/js/common.js?v=4bd5ccac50" defer></script>
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to main content</a>
@@ -23,6 +23,7 @@
 <div class="wrap prose"><h1 id="how-we-built-this-site">How We Built This Site</h1>
 <p>Free AI Explorer lists 1,641 tools, lessons, and unplugged activities for K-12 computing, AI, and robotics. It favors tools that keep student data local. It is an AI-assisted experiment by Jeremy Riel, PhD, of the UIC TRAILblazer Lab. This page explains how we made it. The first part is for teachers. The expandable sections at the end are for researchers and IT staff.</p>
 <h2 id="the-short-version">The short version</h2>
+<p>This site is a focused collection. It does not inventory every AI tool for education. It gives priority to open-access tools and tools that run locally or on school servers. Cloud tools appear too, with clear privacy labels.</p>
 <ul>
 <li>We built the site in three stages. First, we searched for tools and wrote a fact sheet for each one. Next, we sorted every tool with a fixed set of labels. Last, we wrote a plain-language page for each tool.</li>
 <li>AI agents did most of the work. They searched the web, read websites, filled in fact sheets, and wrote pages. Small Python programs checked every step. A stage ended only after its checks passed.</li>
@@ -278,7 +279,7 @@
 <h2 id="image-sourcing">Image sourcing</h2>
 <p>The protocol put openly licensed images first. A script searched Wikimedia Commons for each item. Its match rate was low. A second script tried Wikipedia lead images. Wikimedia throttled the downloads and stopped it. The project lead chose to launch with local category icons. The site shows icons for that reason. The photo script can run again later.</p>
 <h2 id="site-construction">Site construction</h2>
-<p>The site is a static folder with no database. A build script renders every page from Markdown sources. It also writes a JSON index for the explorer. The build produces 1,645 pages. The site can be embedded in WordPress through a shortcode plugin. It is hosted on GitHub Pages.</p>
+<p>The site is a static folder with no database. A build script renders every page from Markdown sources. It also writes a JSON index for the explorer. The build produces 1,648 pages: 1,641 tool pages and 7 other pages. The site can be embedded in WordPress through a shortcode plugin. It is hosted on GitHub Pages.</p>
 <p>The site makes no third-party requests. Scripts, styles, and icons all load from the site itself. It has no ads, trackers, or analytics. My List lives only in the visitor's browser. Each page sets this Content Security Policy.</p>
 <ul>
 <li>default-src 'self'</li>
@@ -312,6 +313,7 @@
     <p>An AI-assisted experiment by Jeremy Riel, PhD, UIC TRAILblazer Lab. Some content was written with generative AI and may contain errors. Check details with each provider before use.</p>
     <p><a href="about.html">About this project</a> · <a href="methods.html">How we built it</a> · <a href="glossary.html">Glossary</a> · <a href="every-subject.html">AI in Every Subject</a> · <a href="why.html">Why AI That Stays in School?</a></p>
     <p><button type="button" class="theme-toggle" data-theme-toggle aria-pressed="false">Dark mode</button></p>
+    <div class="logos logos-footer"><a class="logo-plate logo-uic" href="https://www.uic.edu" rel="noopener noreferrer"><img src="assets/img/uic-circle.svg" alt="" width="40" height="40"><span>University of Illinois<br>Chicago</span></a><a class="logo-plate logo-tb" href="https://www.trailblazerlab.org" rel="noopener noreferrer"><img src="assets/img/trailblazer-lab-logo.png" alt="TRAILblazer Lab, Teaching and Research with AI Learning" width="900" height="278"></a></div>
   </div>
 </footer>
 </body>
