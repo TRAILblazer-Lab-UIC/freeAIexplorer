@@ -5,156 +5,176 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'; connect-src 'self'">
 <meta name="referrer" content="strict-origin-when-cross-origin">
-<title>Free AI Explorer: Explore free and local AI tools for schools</title>
-<meta name="description" content="Find free, local, and privacy-friendly AI, computing, and robotics tools for K-12 classrooms.">
-<link rel="stylesheet" href="assets/css/site.css?v=73ce845ac2">
+<title>Free AI Explorer: AI tools for every classroom</title>
+<meta name="description" content="Free, private AI and computing tools for K-12 teachers of every subject. Help students learn with AI and about AI, safely and creatively.">
+<link rel="stylesheet" href="assets/css/site.css?v=5f4268e5ab">
 <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
-<script src="assets/js/common.js?v=73ce845ac2" defer></script><script src="assets/js/explorer.js?v=73ce845ac2" defer></script>
+<script src="assets/js/common.js?v=5f4268e5ab" defer></script><script src="assets/js/explorer.js?v=5f4268e5ab" defer></script>
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to main content</a>
 <header class="site-header">
   <div class="wrap header-inner">
     <a class="brand" href="index.html"><svg class="brand-icon" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false"><path d="M9 4h6v3H9zM6 7h12v11H6zM9 11h.01M15 11h.01M9 15h6M12 2v2M3 11v3M21 11v3" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Free AI Explorer</span></a>
-    <nav aria-label="Main"><ul class="nav"><li><a href="index.html" aria-current="page">Explore</a></li><li><a href="why.html">Why AI That Stays in School?</a></li><li><a href="mylist.html">My List <span class="count" data-list-count></span></a></li><li><a href="glossary.html">Glossary</a></li><li><a href="methods.html">Methods</a></li><li><a href="about.html">About</a></li></ul></nav>
+    <nav aria-label="Main"><ul class="nav"><li><a href="index.html" aria-current="page">Explore</a></li><li><a href="every-subject.html">AI in Every Subject</a></li><li><a href="why.html">Why Local AI?</a></li><li><a href="glossary.html">Glossary</a></li><li><a href="mylist.html">My List <span class="count" data-list-count></span></a></li><li><a href="about.html">About</a></li></ul></nav>
   </div>
 </header>
 <main id="main" tabindex="-1">
 <section class="hero">
-  <div class="wrap">
-    <h1>Find free AI tools that keep student data safe</h1>
-    <p class="lead">Browse 1641 tools, lessons, and activities for computing, AI, and robotics. Many run on your own devices. Student work stays in your school.</p>
+  <div class="wrap hero-inner">
+    <p class="hero-kicker">For teachers of every subject</p>
+    <h1>AI tools for every classroom</h1>
+    <p class="lead">Free, private AI and computing tools for teachers of every subject. Help students learn with AI and about AI, safely and creatively.</p>
+    <div class="hero-actions">
+      <a class="btn btn-primary btn-big" href="#browse">Find tools for my class</a>
+      <a class="btn btn-big btn-soft" href="#local-ai">New to AI? Start here</a>
+    </div>
+    <p class="hero-note"><svg class="note-icon" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false"><path d="M3 21V9l9-6 9 6v12M9 21v-6h6v6M3 21h18M12 7v4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg> Many tools run on devices your school already owns.</p>
     <details class="howto">
       <summary>How to use this site</summary>
       <div class="howto-body">
         <ol>
-          <li>New to AI? Press <strong>For AI Beginners</strong>. You will see easy tools where students can watch AI at work.</li>
-          <li>Open <strong>I'm looking for something specific</strong>. Pick your grade, subject, devices, internet, budget, and privacy needs. The best matches rise to the top.</li>
-          <li>Narrow the list with the filters. Choose a type of technology, a subject, or a kind of resource such as a lesson or a robot.</li>
-          <li>Read the badges on each card. The colored badge shows where student data goes. Green means it stays on the device.</li>
-          <li>Open a tool page. Each page explains the tool in plain words. It lists benefits, a setup checklist, privacy notes, and five ideas for each subject.</li>
-          <li>Select the star to save a tool to <a href="mylist.html">My List</a>. Print a "Try It Out" plan or share your list with a colleague.</li>
+          <li>Tell us about your class. Pick a grade, a subject, and the devices you have.</li>
+          <li>Choose a type of technology, or leave them all open.</li>
+          <li>New to AI? Turn on the beginner view. It shows easy tools where students can watch AI at work.</li>
+          <li>Read the little labels on each card. They show cost, technology type, and where student data goes.</li>
+          <li>Open a tool to read a plain description, a setup checklist, privacy notes, and five ideas for each subject.</li>
+          <li>Select the star to save a tool to <a href="mylist.html">My List</a>. Print a plan or share it with a colleague.</li>
         </ol>
-        <p>Every page was researched and written with help from AI. Check details with each provider before class. Read <a href="why.html">why AI that stays in school matters</a> or <a href="methods.html">how we built this site</a>.</p>
+        <p>Every page was researched and written with help from AI. Check details with each provider before class.</p>
       </div>
     </details>
   </div>
 </section>
 
-<section class="why-band" aria-labelledby="why-heading">
+<section class="band band-local" id="local-ai" aria-labelledby="local-heading">
   <div class="wrap">
-    <h2 id="why-heading">Why choose AI that stays in your school?</h2>
-    <p class="lead">Most AI chat tools send every word to a company's computers. Local AI runs on devices your school already owns. Student work stays in the room.</p>
-    <div class="table-wrap">
-      <table class="compare">
-        <caption class="visually-hidden">Company cloud AI compared with AI that stays in your school</caption>
-        <thead>
-          <tr><th scope="col">Question</th><th scope="col">Company cloud AI</th><th scope="col">AI that stays in your school</th></tr>
-        </thead>
-        <tbody>
-          <tr><th scope="row">Where does it run?</th><td>On company servers far away</td><td>On school laptops, tablets, robots, or a school server</td></tr>
-          <tr><th scope="row">Where do student words go?</th><td>To the company</td><td>They stay in the room</td></tr>
-          <tr><th scope="row">Does it need the internet?</th><td>Always</td><td>Often only for setup, or not at all</td></tr>
-          <tr><th scope="row">Are there age limits?</th><td>Often 13 and up, sometimes 18 and up</td><td>Usually no account and no age limit</td></tr>
-          <tr><th scope="row">What does it cost?</th><td>Often a fee per student or per year</td><td>Often free</td></tr>
-        </tbody>
-      </table>
+    <h2 id="local-heading">What is local AI?</h2>
+    <p class="band-lead">AI is software that can recognize, sort, or create things. It can run in one of two places.</p>
+    <div class="two-cards">
+      <div class="pic-card pic-cloud">
+        <svg class="pic" viewBox="0 0 120 80" aria-hidden="true" focusable="false"><path d="M30 58h52a16 16 0 0 0 2-32 22 22 0 0 0-42-4 18 18 0 0 0-12 36z" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/><path d="M14 74h22M25 74V62M98 74h-8l-6-10" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/><path d="M58 30v18M52 36l6-6 6 6" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <h3>Cloud AI</h3>
+        <p>Like mailing a letter. Your words travel to a company's computer far away. The company may keep a copy.</p>
+      </div>
+      <div class="pic-card pic-local">
+        <svg class="pic" viewBox="0 0 120 80" aria-hidden="true" focusable="false"><path d="M20 70V34l40-24 40 24v36M48 70V52h24v18M14 70h92" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M44 30h32v14H44zM40 48h40" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/></svg>
+        <h3>Local AI</h3>
+        <p>Like a calculator on your desk. It works right here, on a school computer, tablet, or robot. Your words stay in your classroom.</p>
+      </div>
     </div>
-    <p class="why-cta"><a class="btn btn-primary" href="why.html">Learn the basics in 5 minutes</a> <span class="muted">Plain words. No technical background needed.</span></p>
+    <ul class="checks">
+      <li><svg class="check-icon" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false"><path d="M5 12l5 5L20 7" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg> Student work stays at school</li>
+      <li><svg class="check-icon" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false"><path d="M5 12l5 5L20 7" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg> Often free</li>
+      <li><svg class="check-icon" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false"><path d="M5 12l5 5L20 7" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg> Often works without internet</li>
+    </ul>
+    <p><a class="text-link" href="why.html">See the full comparison and the basics</a></p>
+  </div>
+</section>
+
+<section class="band band-subjects" aria-labelledby="subjects-heading">
+  <div class="wrap">
+    <h2 id="subjects-heading">AI belongs in every subject</h2>
+    <p class="band-lead">Every teacher can help students think critically, use AI responsibly, and stay creative. Pick your subject to see tools that fit.</p>
+    <ul class="subject-tiles"><li><a class="subject-tile" href="#browse" data-sub="ela"><svg class="tile-icon" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false"><path d="M4 5h7a3 3 0 0 1 3 3v11a2 2 0 0 0-2-2H4zM20 5h-4a2 2 0 0 0-2 2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>English and Language Arts</span></a></li><li><a class="subject-tile" href="#browse" data-sub="math"><svg class="tile-icon" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false"><path d="M5 7h6M8 4v6M13 7h6M5 16l6 0M13 14l6 6M19 14l-6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Math</span></a></li><li><a class="subject-tile" href="#browse" data-sub="science"><svg class="tile-icon" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false"><path d="M9 3h6M10 3v6l-5 9a2 2 0 0 0 2 3h10a2 2 0 0 0 2-3l-5-9V3" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Science</span></a></li><li><a class="subject-tile" href="#browse" data-sub="social_studies"><svg class="tile-icon" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false"><path d="M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18zM3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Social Studies</span></a></li><li><a class="subject-tile" href="#browse" data-sub="visual_arts"><svg class="tile-icon" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false"><path d="M12 3a9 9 0 0 0 0 18c1.5 0 2-1 2-2s-1-2 0-3 3 0 4-1 3-3 3-5c0-4-4-7-9-7zM7.5 11h.01M10 7h.01M15 7h.01" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Visual Arts</span></a></li><li><a class="subject-tile" href="#browse" data-sub="music"><svg class="tile-icon" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false"><path d="M9 18V5l11-2v13M9 18a3 3 0 1 1-3-3 3 3 0 0 1 3 3zM20 16a3 3 0 1 1-3-3 3 3 0 0 1 3 3z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Music</span></a></li><li><a class="subject-tile" href="#browse" data-sub="theater_media"><svg class="tile-icon" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false"><path d="M3 6h18v12H3zM3 10h18M7 6v4M12 6v4M17 6v4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Theater and Media Arts</span></a></li><li><a class="subject-tile" href="#browse" data-sub="computer_science"><svg class="tile-icon" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false"><path d="M8 8l-4 4 4 4M16 8l4 4-4 4M14 5l-4 14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Computer Science</span></a></li><li><a class="subject-tile" href="#browse" data-sub="cte"><svg class="tile-icon" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false"><path d="M14 6l4 4-8 8H6v-4zM12 8l4 4M4 20h16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Career and Technical Education</span></a></li><li><a class="subject-tile" href="#browse" data-sub="engineering"><svg class="tile-icon" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false"><path d="M12 8a4 4 0 1 0 0 8 4 4 0 0 0 0-8zM12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M5 19l2-2M17 7l2-2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Engineering and Design</span></a></li><li><a class="subject-tile" href="#browse" data-sub="world_languages"><svg class="tile-icon" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false"><path d="M4 5h9M8.5 3v2M6 5c0 4 3 7 6 8M11 5c0 4-3 7-6 8M13 21l4-9 4 9M14.5 18h5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>World Languages</span></a></li><li><a class="subject-tile" href="#browse" data-sub="health_pe"><svg class="tile-icon" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false"><path d="M12 20s-7-4.5-7-10a4 4 0 0 1 7-2.5A4 4 0 0 1 19 10c0 5.5-7 10-7 10z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Health and PE</span></a></li><li><a class="subject-tile" href="#browse" data-sub="special_ed"><svg class="tile-icon" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false"><path d="M12 4a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zM6 9h12M12 9v5M9 21l3-7 3 7" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Special Education and Accessibility</span></a></li><li><a class="subject-tile" href="#browse" data-sub="library_media"><svg class="tile-icon" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false"><path d="M5 4h3v16H5zM10 4h3v16h-3zM15 5l3-1 3 15-3 1z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Library and Media Literacy</span></a></li></ul>
+    <p><a class="btn btn-soft" href="every-subject.html">Why AI is for every subject</a></p>
   </div>
 </section>
 
 <section class="browse" id="browse" aria-labelledby="browse-heading">
-<div class="browse-head">
-  <div class="wrap">
-    <p class="browse-kicker">Tool finder</p>
-    <h2 id="browse-heading">Find tools for your class</h2>
-    <p class="browse-intro">Search, filter, and compare 1641 tools, lessons, and activities. Start with the beginner view or tell us what you need.</p>
-  </div>
-</div>
-<div class="wrap beginner-row">
-    <button type="button" id="beginner-toggle" class="beginner-btn" aria-pressed="false">
-      <span class="beginner-title">For AI Beginners</span>
-      <span class="beginner-sub">Show easy tools where students can see AI at work</span>
-    </button>
-</div>
-
-<div class="wrap tech-row">
-  <fieldset class="tech-pick">
-    <legend>Type of technology <span class="muted">(choose any)</span></legend>
-    <div class="tech-buttons" id="tech-buttons"></div>
-  </fieldset>
-</div>
-
-<div class="wrap explorer">
-  <div class="search-row">
-    <label for="q" class="search-label">Search tools</label>
-    <input type="search" id="q" name="q" autocomplete="off" placeholder="Try robots, poetry, or speech">
-  </div>
-
-  <details class="needs" id="needs" open>
-    <summary>I'm looking for something specific</summary>
-    <p class="muted">Pick what fits your class. The best matches rise to the top of the list.</p>
-    <div class="needs-grid">
-      <label>Grade
-        <select data-need="grade">
-          <option value="">Any grade</option><option value="k2">Grades K-2</option><option value="g35">Grades 3-5</option>
-          <option value="g68">Grades 6-8</option><option value="g912">Grades 9-12</option>
-        </select>
-      </label>
-      <label>Subject
-        <select data-need="subject" id="need-subject"><option value="">Any subject</option></select>
-      </label>
-      <label>Devices we have
-        <select data-need="device">
-          <option value="">Any devices</option><option value="chromebook">Chromebooks</option><option value="ipad">iPads</option>
-          <option value="windows">Windows computers</option><option value="mac">Macs</option><option value="paper">No devices, paper only</option>
-        </select>
-      </label>
-      <label>Internet in class
-        <select data-need="internet">
-          <option value="">Reliable internet</option><option value="limited">Limited or none</option>
-        </select>
-      </label>
-      <label>Budget
-        <select data-need="budget">
-          <option value="">Any budget</option><option value="free">Free only</option><option value="low">Up to $50 per unit</option>
-        </select>
-      </label>
-      <label>Privacy needs
-        <select data-need="privacy">
-          <option value="">Keep data local when possible</option><option value="strict">Student data must stay in school</option>
-        </select>
-      </label>
-      <label>My comfort with tech
-        <select data-need="comfort">
-          <option value="">Some experience</option><option value="new">I am new to this</option><option value="confident">Very confident</option>
-        </select>
-      </label>
+  <div class="browse-head">
+    <div class="wrap">
+      <p class="browse-kicker">Tool finder</p>
+      <h2 id="browse-heading">Find tools for your class</h2>
+      <p class="browse-intro">Choose what fits. The best matches rise to the top. 1,641 tools, lessons, and activities.</p>
     </div>
-  </details>
+  </div>
 
-  <div class="explorer-grid">
-    <aside class="filters" aria-label="Filters">
-      <div class="filters-head">
-        <h2>Filters</h2>
-        <button type="button" id="clear-filters" class="link-btn">Clear all</button>
+  <div class="wrap finder">
+    <div class="step">
+      <h3 class="step-title"><span class="step-num" aria-hidden="true">1</span> Tell us about your class</h3>
+      <div class="needs" id="needs">
+        <div class="needs-grid needs-main">
+          <label>Grade
+            <select data-need="grade">
+              <option value="">Any grade</option><option value="k2">Grades K-2</option><option value="g35">Grades 3-5</option>
+              <option value="g68">Grades 6-8</option><option value="g912">Grades 9-12</option>
+            </select>
+          </label>
+          <label>Subject
+            <select data-need="subject" id="need-subject"><option value="">Any subject</option></select>
+          </label>
+          <label>Devices we have
+            <select data-need="device">
+              <option value="">Any devices</option><option value="chromebook">Chromebooks</option><option value="ipad">iPads</option>
+              <option value="windows">Windows computers</option><option value="mac">Macs</option><option value="paper">No devices, paper only</option>
+            </select>
+          </label>
+        </div>
+        <details class="more-options" id="more-options">
+          <summary>More options</summary>
+          <div class="needs-grid">
+            <label>Internet in class
+              <select data-need="internet">
+                <option value="">Reliable internet</option><option value="limited">Limited or none</option>
+              </select>
+            </label>
+            <label>Budget
+              <select data-need="budget">
+                <option value="">Any budget</option><option value="free">Free only</option><option value="low">Up to $50 per unit</option>
+              </select>
+            </label>
+            <label>Privacy needs
+              <select data-need="privacy">
+                <option value="">Keep data local when possible</option><option value="strict">Student data must stay in school</option>
+              </select>
+            </label>
+            <label>My comfort with tech
+              <select data-need="comfort">
+                <option value="">Some experience</option><option value="new">I am new to this</option><option value="confident">Very confident</option>
+              </select>
+            </label>
+          </div>
+        </details>
       </div>
+    </div>
+
+    <div class="step">
+      <fieldset class="tech-pick">
+        <legend class="step-title"><span class="step-num" aria-hidden="true">2</span> What kind of technology? <span class="muted">Choose any</span></legend>
+        <div class="tech-buttons" id="tech-buttons"></div>
+      </fieldset>
+    </div>
+
+    <div class="step step-search">
+      <h3 class="step-title"><span class="step-num" aria-hidden="true">3</span> Search or browse</h3>
+      <div class="search-row">
+        <label for="q" class="visually-hidden">Search tools</label>
+        <input type="search" id="q" name="q" autocomplete="off" placeholder="Search, for example robots, poetry, or speech">
+        <button type="button" id="beginner-toggle" class="beginner-chip" aria-pressed="false"><svg class="chip-icon" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8zM19 16l.8 2.2L22 19l-2.2.8L19 22l-.8-2.2L16 19l2.2-.8z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg> <span>For AI Beginners</span></button>
+      </div>
+    </div>
+
+    <div class="results-bar">
       <div class="switch-row">
         <input type="checkbox" id="local-only" checked>
         <label for="local-only">Hide tools that send student data to a company</label>
       </div>
-      <div class="switch-row">
-        <input type="checkbox" id="hide-unverified">
-        <label for="hide-unverified">Hide tools with unverified privacy</label>
-      </div>
-      <div id="facets"></div>
-    </aside>
-
-    <section class="results" aria-labelledby="results-heading">
-      <div class="results-head">
-        <h2 id="results-heading" class="visually-hidden">Results</h2>
-        <p id="result-count" role="status" aria-live="polite" aria-atomic="true">Loading tools</p>
+      <div class="results-tools">
+        <details class="more-filters" id="more-filters">
+          <summary>More filters</summary>
+          <div class="filters-panel">
+            <div class="filters-head">
+              <p class="muted">Narrow the list. Choose any boxes.</p>
+              <button type="button" id="clear-filters" class="link-btn">Clear all</button>
+            </div>
+            <div class="switch-row">
+              <input type="checkbox" id="hide-unverified">
+              <label for="hide-unverified">Hide tools with unverified privacy</label>
+            </div>
+            <div id="facets" class="facets-grid"></div>
+          </div>
+        </details>
         <label class="sort">Sort by
           <select id="sort">
             <option value="match">Best match</option>
@@ -163,23 +183,25 @@
           </select>
         </label>
       </div>
+    </div>
+
+    <section class="results" aria-labelledby="results-heading">
+      <h2 id="results-heading" class="visually-hidden">Results</h2>
+      <p id="result-count" role="status" aria-live="polite" aria-atomic="true">Loading tools</p>
       <p id="filter-note" class="notice" hidden></p>
       <ul id="cards" class="cards"></ul>
       <div class="more-row"><button type="button" id="more" class="btn" hidden>Show more tools</button></div>
-      <noscript><p class="notice">The explorer needs JavaScript. Every tool also has its own page. Browse the full list on the <a href="data/products.json">data file</a>.</p></noscript>
+      <noscript><p class="notice">The tool finder needs JavaScript. Every tool also has its own page. Browse the full list on the <a href="data/products.json">data file</a>.</p></noscript>
     </section>
   </div>
-</div>
-
 </section>
 
 <template id="card-tpl">
   <li class="card">
-    <div class="card-img" aria-hidden="true"></div>
     <div class="card-body">
       <h3 class="card-title"><a></a></h3>
       <p class="card-tagline"></p>
-      <p class="card-badges"></p>
+      <ul class="card-tags" aria-label="Labels"></ul>
     </div>
     <button type="button" class="star-btn small" aria-pressed="false"><span class="star-label visually-hidden">Add to My List</span></button>
   </li>
@@ -189,7 +211,8 @@
 <footer class="site-footer">
   <div class="wrap">
     <p>An AI-assisted experiment by Jeremy Riel, PhD, UIC TRAILblazer Lab. Some content was written with generative AI and may contain errors. Check details with each provider before use.</p>
-    <p><a href="about.html">About this project</a> · <a href="methods.html">How we built it</a> · <a href="glossary.html">Glossary</a> · <a href="why.html">Why AI That Stays in School?</a></p>
+    <p><a href="about.html">About this project</a> · <a href="methods.html">How we built it</a> · <a href="glossary.html">Glossary</a> · <a href="every-subject.html">AI in Every Subject</a> · <a href="why.html">Why AI That Stays in School?</a></p>
+    <p><button type="button" class="theme-toggle" data-theme-toggle aria-pressed="false">Dark mode</button></p>
   </div>
 </footer>
 </body>

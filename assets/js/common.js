@@ -3,6 +3,23 @@
 (function () {
   'use strict';
   var KEY = 'fae-mylist-v1';
+  var THEME_KEY = 'fae-theme';
+  /* Light is the default. A saved choice of dark is applied as early as possible. */
+  var themeNow = null;
+  function savedTheme() {
+    if (themeNow) return themeNow;
+    try { themeNow = localStorage.getItem(THEME_KEY) === 'dark' ? 'dark' : 'light'; } catch (e) { themeNow = 'light'; }
+    return themeNow;
+  }
+  function applyTheme(t) {
+    if (t === 'dark') document.documentElement.setAttribute('data-theme', 'dark');
+    else document.documentElement.removeAttribute('data-theme');
+    document.querySelectorAll('[data-theme-toggle]').forEach(function (b) {
+      b.setAttribute('aria-pressed', t === 'dark' ? 'true' : 'false');
+      b.textContent = t === 'dark' ? 'Light mode' : 'Dark mode';
+    });
+  }
+  applyTheme(savedTheme());
   var SLUG = /^[a-z0-9][a-z0-9-]{0,80}$/;
 
   function read() {
@@ -75,6 +92,15 @@
   window.FAE = { read: read, write: write, has: has, toggle: toggle, wireStars: wireStars, announce: announce, SLUG: SLUG, postHeight: postHeight };
   document.addEventListener('DOMContentLoaded', function () {
     if (window.parent !== window) document.documentElement.classList.add('embedded');
+    applyTheme(savedTheme());
+    document.querySelectorAll('[data-theme-toggle]').forEach(function (b) {
+      b.addEventListener('click', function () {
+        var next = savedTheme() === 'dark' ? 'light' : 'dark';
+        themeNow = next;
+        try { localStorage.setItem(THEME_KEY, next); } catch (e) { /* keep for this page only */ }
+        applyTheme(next);
+      });
+    });
     updateCount();
     wireStars(document);
     postHeight();

@@ -80,8 +80,7 @@
       var k = fo[0];
       var det = document.createElement('details');
       det.className = 'facet';
-      var wide = !window.matchMedia || window.matchMedia('(min-width: 961px)').matches;
-      if ((wide && OPEN_BY_DEFAULT[k]) || (state.f[k] && state.f[k].length)) det.open = true;
+      if (state.f[k] && state.f[k].length) det.open = true;
       var sum = document.createElement('summary');
       sum.textContent = fo[1];
       det.appendChild(sum);
@@ -238,10 +237,13 @@
     var notes = [];
     if (state.local) notes.push('Tools that send student data to a company are hidden.');
     if (state.beg) notes.push('Showing tools for AI beginners.');
+    if (state.f.sub && state.f.sub.length) notes.push('Subject: ' + state.f.sub.map(function (v) { return labels.sub[v] || v; }).join(', ') + '. Use More filters to change it.');
     els.note.hidden = !notes.length;
     els.note.textContent = notes.join(' ');
     els.beg.setAttribute('aria-pressed', state.beg ? 'true' : 'false');
     syncTechButtons();
+    var mf = document.querySelector('#more-filters > summary');
+    if (mf) { var n = activeFilterCount(); mf.textContent = n ? 'More filters (' + n + ' on)' : 'More filters'; }
     window.FAE.postHeight();
   }
   function updateCounts(words) {
@@ -269,38 +271,84 @@
     if (!idx.length) return '';
     return 'Grades ' + names[order[idx[0]]] + '-' + ends[order[idx[idx.length - 1]]];
   }
+  var COST_SIGN = { free: 'FREE', under50: '$', '50to200': '$$', over200: '$$$', license: '$ License' };
+  var PRIV_SHORT = { green: 'Stays on device', blue: 'School server', yellow: 'Local, optional cloud',
+    red: 'Sends data to a company', paper: 'No device needed', unverified: 'Privacy unverified' };
+  function tag(iconName, text, cls, title) {
+    var li = document.createElement('li');
+    li.className = 'tag ' + (cls || '');
+    if (iconName) li.appendChild(svgIcon(iconName, 'tag-icon'));
+    var sp = document.createElement('span');
+    sp.textContent = text;
+    li.appendChild(sp);
+    if (title) li.title = title;
+    return li;
+  }
   function card(it) {
     var node = els.tpl.content.firstElementChild.cloneNode(true);
     var a = node.querySelector('.card-title a');
     a.textContent = it.n;
     a.href = 'tools/' + it.s + '.html';
     node.querySelector('.card-tagline').textContent = it.t;
-    var img = node.querySelector('.card-img');
-    if (it.img) {
+    if (it.img) {  /* only show a picture when a real one exists */
+      var fig = document.createElement('div');
+      fig.className = 'card-img';
       var im = document.createElement('img');
       im.src = 'images/' + it.img;
       im.alt = '';
       im.loading = 'lazy';
       im.width = 96; im.height = 72;
-      img.appendChild(im);
-    } else {
-      img.appendChild(svgIcon(it.icon, 'card-icon'));
+      fig.appendChild(im);
+      node.insertBefore(fig, node.firstChild);
+      node.classList.add('has-img');
     }
-    var bs = node.querySelector('.card-badges');
-    (it.priv || []).forEach(function (p) { bs.appendChild(badge(labels.priv[p] || p, 'priv-' + p)); });
-    (it.cost || []).forEach(function (c) { if (c !== 'unknown') bs.appendChild(badge(labels.cost[c] || c)); });
+    var tags = node.querySelector('.card-tags');
+    (it.cost || []).forEach(function (c) {
+      if (c === 'unknown' || !COST_SIGN[c]) return;
+      tags.appendChild(tag(null, COST_SIGN[c], 'tag-cost cost-' + c, labels.cost[c]));
+      if (c !== 'free') tags.appendChild(tag(null, labels.cost[c], 'tag-plain'));
+    });
+    (it.tt || []).forEach(function (t) { tags.appendChild(tag(t, labels.tt[t] || t, 'tag-tech')); });
+    (it.priv || []).forEach(function (p) { tags.appendChild(tag('p-' + p, PRIV_SHORT[p] || labels.priv[p] || p, 'priv-' + p, labels.priv[p])); });
     var g = gradeRange(it.gr || []);
-    if (g) bs.appendChild(badge(g));
-    if (it.beg) bs.appendChild(badge('AI beginner', 'badge-beginner'));
+    if (g) tags.appendChild(tag('grade', g, 'tag-plain'));
+    if (it.beg) tags.appendChild(tag('sparkle', 'AI beginner', 'tag-beginner'));
     var star = node.querySelector('.star-btn');
     star.setAttribute('data-star', it.s);
     star.setAttribute('data-name', it.n);
     star.insertBefore(svgIcon('star', 'star-icon'), star.firstChild);
     return node;
   }
+  function activeFilterCount() {
+    var n = state.hideUnv ? 1 : 0;
+    Object.keys(state.f).forEach(function (k) { if (k !== 'tt') n += (state.f[k] || []).length; });
+    return n;
+  }
+  function setSubject(id) {
+    state.f.sub = [id];
+    state.needs.subject = id;
+    var ns = $('need-subject');
+    if (ns) ns.value = id;
+    document.querySelectorAll('#facets input[data-facet="sub"]').forEach(function (cb) { cb.checked = cb.value === id; });
+    state.shown = PAGE;
+    render();
+  }
 
   /* ---------- wiring ---------- */
+  function wireTiles() {
+    document.querySelectorAll('.subject-tile[data-sub]').forEach(function (a) {
+      a.addEventListener('click', function (e) {
+        e.preventDefault();
+        setSubject(a.getAttribute('data-sub'));
+        var b = $('browse');
+        if (b) b.scrollIntoView({ block: 'start' });
+        var h = $('result-count');
+        if (h) { h.setAttribute('tabindex', '-1'); h.focus({ preventScroll: true }); }
+      });
+    });
+  }
   function wire() {
+    wireTiles();
     var t;
     els.q.value = state.q;
     els.q.addEventListener('input', function () {
@@ -324,7 +372,7 @@
     });
     document.querySelectorAll('[data-need]').forEach(function (sel) {
       var k = sel.getAttribute('data-need');
-      if (state.needs[k]) { sel.value = state.needs[k]; $('needs').open = true; }
+      if (state.needs[k]) { sel.value = state.needs[k]; if (['internet', 'budget', 'privacy', 'comfort'].indexOf(k) !== -1) $('more-options').open = true; }
       sel.addEventListener('change', function () {
         state.needs[k] = sel.value;
         if (sel.value) state.sort = 'match';
