@@ -1,0 +1,298 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'; connect-src 'self'">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<title>How We Built This Site | Free AI Explorer</title>
+<meta name="description" content="How We Built This Site">
+<link rel="stylesheet" href="assets/css/site.css?v=c5ed5ba238">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<script src="assets/js/common.js?v=c5ed5ba238" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="index.html"><svg class="brand-icon" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false"><path d="M9 4h6v3H9zM6 7h12v11H6zM9 11h.01M15 11h.01M9 15h6M12 2v2M3 11v3M21 11v3" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Free AI Explorer</span></a>
+    <nav aria-label="Main"><ul class="nav"><li><a href="index.html">Explore</a></li><li><a href="why.html">Why AI That Stays in School?</a></li><li><a href="mylist.html">My List <span class="count" data-list-count></span></a></li><li><a href="methods.html" aria-current="page">Methods</a></li><li><a href="about.html">About</a></li></ul></nav>
+  </div>
+</header>
+<main id="main" tabindex="-1">
+<div class="wrap prose"><h1 id="how-we-built-this-site">How We Built This Site</h1>
+<p>Free AI Explorer lists 1,641 tools, lessons, and unplugged activities for K-12 computing, AI, and robotics. It favors tools that keep student data local. It is an AI-assisted experiment by Jeremy Riel, PhD, of the UIC TRAILblazer Lab. This page explains how we made it. The first part is for teachers. The expandable sections at the end are for researchers and IT staff.</p>
+<h2 id="the-short-version">The short version</h2>
+<ul>
+<li>We built the site in three stages. First, we searched for tools and wrote a fact sheet for each one. Next, we sorted every tool with a fixed set of labels. Last, we wrote a plain-language page for each tool.</li>
+<li>AI agents did most of the work. They searched the web, read websites, filled in fact sheets, and wrote pages. Small Python programs checked every step. A stage ended only after its checks passed.</li>
+<li>Each fact sheet had to cite its sources. The search turned up 2,014 possible items. We kept 1,641 for the site.</li>
+<li>We tested our labels for consistency. A second AI scored a random sample on its own. Then we compared the two sets of scores. Two labels fell short of our target. We tightened the scoring rules and scored every tool again.</li>
+<li>We also fact-checked the pages. A reviewer compared 40 random pages with their fact sheets. It found 2 serious errors and 24 minor ones. We then rechecked the privacy text on every page. A new sample of 40 pages had no serious errors and 21 minor ones. We fixed all of them.</li>
+<li>The privacy label tells you where student data goes. Each tool gets one of six labels. They are explained in the next section.</li>
+<li>The labels lean toward caution on purpose. A missing fact gives an Unverified label. It never gives a safe-sounding one.</li>
+<li>The site has limits. We did not test any tool in a classroom. We did not measure learning. AI wrote the pages, and AI makes mistakes. Prices and privacy terms change often. Check with the provider before you use a tool with students.</li>
+<li>Please tell us about errors. You can reach the lab through <a href="https://www.trailblazerlab.org" rel="noopener noreferrer">trailblazerlab.org</a>.</li>
+</ul>
+<h2 id="what-the-labels-mean">What the labels mean</h2>
+<p>Some labels come from fixed rules. A Python program reads each fact sheet and applies the same rule every time. We call these rule-based facts. Other labels are estimates. An AI agent scored them with a point system called a rubric. Two careful people could score these differently. Treat them as a starting point.</p>
+<div class="table-wrap"><table class="compare"><thead><tr><th scope="col">Label</th><th scope="col">What it tells you</th><th scope="col">Kind</th></tr></thead><tbody><tr><th scope="row">Privacy level</th><td>Where student work and data go</td><td>Rule-based fact, then a caution check</td></tr><tr><th scope="row">Internet need</th><td>Works offline, only for setup, always online, or unverified</td><td>Rule-based fact</td></tr><tr><th scope="row">Youngest users</th><td>The lowest age the provider allows</td><td>Rule-based fact, then an age audit</td></tr><tr><th scope="row">Ease for students</th><td>Easy, moderate, or advanced for students</td><td>Rubric estimate</td></tr><tr><th scope="row">Teacher learning curve</th><td>How much a teacher must learn first</td><td>Rubric estimate</td></tr><tr><th scope="row">Setup time</th><td>Minutes, about an hour, or a day or more</td><td>Rubric estimate</td></tr><tr><th scope="row">AI beginner</th><td>A good first AI tool for a new teacher</td><td>Rubric estimate</td></tr><tr><th scope="row">Popularity</th><td>A rough sign of how well known a tool is</td><td>Formula over indirect signals</td></tr><tr><th scope="row">Classroom evidence</th><td>The strongest evidence of classroom use we found</td><td>Rule-based fact</td></tr></tbody></table></div>
+<h3 id="privacy-level">Privacy level</h3>
+<ul>
+<li>Stays on the device. The tool runs on the computer, tablet, or robot. Student work stays there.</li>
+<li>Stays on a school server. The school runs the tool on a server it controls.</li>
+<li>Local with optional cloud or accounts. The main features run locally. Accounts or some extras use a company's servers.</li>
+<li>Sends student data to a company. Student work or account details go to an outside company.</li>
+<li>No device needed. The activity uses paper, cards, or movement.</li>
+<li>Unverified. The research could not confirm where data goes. Check before class.</li>
+</ul>
+<p>On the site today, 474 items stay on the device and 33 stay on a school server. Another 223 are local with optional cloud or accounts. 261 send student data to a company. 128 need no device. 522 are unverified.</p>
+<h3 id="the-other-labels">The other labels</h3>
+<ul>
+<li>Internet need. A tool that works only over the school network counts as offline. Unknown becomes Unverified.</li>
+<li>Youngest users. The values are any age, 13 and up, 16 and up, 18 and up, or unknown. Any age means the research found no age limit. It also means the tool needs no account and keeps data local. Most items are unknown.</li>
+<li>Ease for students. The score adds points for five things. These are the interface, the reading load, the time to a first success, any building of hardware, and how abstract the ideas are.</li>
+<li>Teacher learning curve. This uses the same five points plus setup effort. Strong ready-made lessons lower the score.</li>
+<li>Setup time. This counts prep time after the school has the item. It leaves out buying and shipping.</li>
+<li>AI beginner. A yes means the tool teaches or uses AI in a visible way. It is also easy or moderate for students. It sets up in an hour or less. It shows students what the AI did.</li>
+<li>Popularity. This blends six signals, such as how often other items name the tool. It counts no real users. It is an inferred index.</li>
+<li>Classroom evidence. The values are peer-reviewed publication, documented classroom use, vendor examples only, or undocumented. Most peer-reviewed papers are design papers or small pilots. The label makes no claim about learning gains.</li>
+</ul>
+<h2 id="limits-you-should-know">Limits you should know</h2>
+<ul>
+<li>English and Spanish only. We kept materials in these two languages. Good tools in other languages are missing.</li>
+<li>The search stopped early. We searched in four rounds. Our rule said to stop once a round found under 5% new items. The last round still found 6.8% new items. The project lead closed the search anyway. Some tools are surely missing.</li>
+<li>This is a snapshot. The data show what we found in November 2026. Tools change, close, or change their terms.</li>
+<li>AI wrote the content. AI agents wrote the fact sheets and the pages. Our fact-checks found errors. Some errors surely remain.</li>
+<li>No classroom testing. Nobody tried these tools with students for this project.</li>
+<li>No learning impact. We did not measure whether any tool helps students learn.</li>
+<li>Popularity is inferred. A formula estimates it from indirect signals. It does not count real users.</li>
+<li>Some facts came from search snippets. A snippet is the short text in a search result. Some vendor sites blocked our agents. The fact sheets mark snippet-only facts. Pages may still state them plainly.</li>
+<li>Subject tags are less certain. Our two AI scorers agreed less on subjects than our target. Each page shows the reason for each subject tag.</li>
+<li>Estimates can read like facts. Pages describe ease and setup in plain sentences. These are rubric estimates.</li>
+</ul>
+<details class="expand"><summary>Advanced technical methods: pipeline, discovery, dossiers, and rule labels (select to expand)</summary><div class="expand-body"><h2 id="pipeline-architecture">Pipeline architecture</h2>
+<p>The pipeline is manifest driven. A Python script defines the expected set of work items before any agent runs. Agents fill those items in batches. A validator then checks that every item exists and every value is allowed. A stage closes only after its validator passes.</p>
+<p>Every stage can be re-run. Batch trackers record each batch as queued, running, or done. Interrupted batches go back to queued and run again. Raw outputs from a closed discovery round stay unchanged. All allowed label values live in one vocabulary file. Every later stage reads that file.</p>
+<p>The stages run in this order.</p>
+<ol>
+<li>A query matrix expands into a list of planned queries with stable IDs.</li>
+<li>Sweep agents run the queries. They write raw candidate files and query logs for each round.</li>
+<li>A merge script deduplicates candidates and computes the new-item rate.</li>
+<li>Triage agents decide inclusion. A script checks coverage and writes the dossier manifest.</li>
+<li>Dossier agents write one fact sheet per included item. A dossier validator checks each one.</li>
+<li>A rule script assigns fact-based labels. Rubric agents score judgment labels. A validator checks values and computes agreement.</li>
+<li>Content agents write one page per item. A content validator and a style linter check each page.</li>
+<li>A build script renders the static site and a JSON index.</li>
+</ol>
+<h3 id="models-used">Models used</h3>
+<p>All agents were Claude Code subagents. Python created every batch and validated every output. The project lead assigned a model to each stage. The written log records only some of these choices. The list below comes from the lead's run records.</p>
+<ul>
+<li>Discovery sweeps and dossier research: Claude Sonnet.</li>
+<li>Triage first pass: Claude Haiku.</li>
+<li>Triage review pass: Claude Sonnet.</li>
+<li>First rubric pass: Claude Sonnet.</li>
+<li>Second coder for the agreement sample: Claude Haiku.</li>
+<li>Adjudication of coder disagreements: Claude Opus.</li>
+<li>Rubric re-score of student ease and setup time: Claude Sonnet.</li>
+<li>Page writing and the privacy pass: Claude Sonnet.</li>
+<li>Minimum-age audit: Claude Sonnet.</li>
+<li>Fact-checks, the gaps report, and this methods page: Claude Opus.</li>
+</ul>
+<p>The second coder used a different and smaller model than the first coder. That choice makes agreement a harder test. It also mixes coder skill with rubric clarity.</p>
+<h2 id="discovery-design">Discovery design</h2>
+<p>The search space had 21 groups across five domains. Six groups covered AI. Seven covered computing. Four covered robotics. Two covered unplugged work. Two covered lessons and research literature. Each group had a focus statement, seed items, and 15 planned queries. The matrix held 315 planned queries in all.</p>
+<p>Each Round 1 agent ran every planned query for its group. It also added at least 10 queries of its own. Agents paired subdomain terms with modifiers. Examples are offline, open source, runs locally, no account, K-12 classroom, lesson plan, and privacy. Agents logged every query and every candidate in a fixed CSV format. Each agent also wrote a landscape report with a gaps section.</p>
+<div class="table-wrap"><table class="compare"><thead><tr><th scope="col">Round</th><th scope="col">Method</th><th scope="col">New items</th><th scope="col">Cumulative</th><th scope="col">New-item rate</th></tr></thead><tbody><tr><th scope="row">1</th><td>21 topic sweeps, one agent per group</td><td>1,447</td><td>1,447</td><td>100%</td></tr><tr><th scope="row">2</th><td>Catalog mining, cross-group leads, two subject sweeps</td><td>321</td><td>1,768</td><td>18.2%</td></tr><tr><th scope="row">3</th><td>Snowball searches of the form "alternatives to X"</td><td>110</td><td>1,878</td><td>5.9%</td></tr><tr><th scope="row">4</th><td>Category searches on areas Round 3 flagged</td><td>136</td><td>2,014</td><td>6.8%</td></tr></tbody></table></div>
+<p>The new-item rate is the count of new unique names in a round divided by the cumulative total. The stopping rule called for a rate below 5% after at least three rounds. That rule was never met. The project lead closed discovery at Checkpoint 1 on 2026-11-19. The decision rested on budget and scope. Round 4 searched only the areas flagged as unsaturated. Its rate likely overstates the remaining yield. Most Round 4 items were low-confidence maybes.</p>
+<p>Two lessons came out of the rounds. "Alternatives to X" queries worked poorly for niche or generic names. Category phrasing worked better. Some areas still yielded new items at the end. These were browser circuit simulators, children's notation apps, laser and CNC lesson plans, Esri GIS apps, and non-English ministry materials. A re-run should start there.</p>
+<p>Discovery ended with 2,014 unique candidates. Agents had marked 1,160 as yes, 794 as maybe, and 60 as no.</p>
+<h3 id="deduplication">Deduplication</h3>
+<p>Two rows merged once their loose name keys matched. The loose key drops case, punctuation, and generic words such as kit or software. It keeps text inside parentheses. An early version dropped that text. That version wrongly merged the Northwestern and Georgia Tech AI Unplugged sets. The fix kept them apart.</p>
+<p>Rows that shared a URL under different names went to a review list. The script never merged those on its own. This kept separate products from one vendor apart. A review agent judged each flagged pair as merge, keep, or unsure. Confirmed merges went into a human-maintained alias file. That file holds 92 merges. Alias chains resolve to the final name.</p>
+<h2 id="triage-and-inclusion-rules">Triage and inclusion rules</h2>
+<p>A triage pass sat between discovery and dossiers. It reviewed every candidate marked yes or maybe. An item was included only under all five of these rules.</p>
+<ol>
+<li>It is a distinct resource a teacher could pick up. Software, hardware, kits, platforms, curricula, lessons, activity sets, and AI models all qualify.</li>
+<li>K-12 students can use it. A teacher-only tool qualifies only for direct support of student-facing computing or AI work.</li>
+<li>It exists and can be obtained now.</li>
+<li>Its materials are available in English or Spanish.</li>
+<li>It fits computing, AI, robotics, or unplugged computing and AI instruction.</li>
+</ol>
+<p>Triage did not judge privacy. Cloud tools stayed in with an honest data-flow rating later.</p>
+<p>Haiku ran the first pass over 20 batches. A Sonnet review pass found that first pass inconsistent across agents. The review applied clarified rules. Content-only apps and general office tools were excluded. Tools with a built-in AI feature for students stayed in. Teacher-only AI assistants were excluded. Lesson and project libraries counted as curricula. PreK-only items were excluded. Legacy products with ongoing vendor support stayed in. The project lead then overrode a few calls. Kolibri, Internet-in-a-Box, and spreadsheets came back in.</p>
+<div class="table-wrap"><table class="compare"><thead><tr><th scope="col">Final decision</th><th scope="col">Reason</th><th scope="col">Count</th></tr></thead><tbody><tr><th scope="row">Include</th><td>Fits the rules</td><td>1,716</td></tr><tr><th scope="row">Exclude</th><td>Excluded during discovery</td><td>60</td></tr><tr><th scope="row">Exclude</th><td>Other, with a written note</td><td>67</td></tr><tr><th scope="row">Exclude</th><td>Duplicate</td><td>38</td></tr><tr><th scope="row">Exclude</th><td>Catalog or source list</td><td>33</td></tr><tr><th scope="row">Exclude</th><td>Aimed beyond K-12</td><td>26</td></tr><tr><th scope="row">Exclude</th><td>Not obtainable</td><td>21</td></tr><tr><th scope="row">Exclude</th><td>Materials in other languages only</td><td>17</td></tr><tr><th scope="row">Exclude</th><td>Research prototype</td><td>14</td></tr><tr><th scope="row">Exclude</th><td>Discontinued</td><td>10</td></tr><tr><th scope="row">Exclude</th><td>General learning management system</td><td>7</td></tr><tr><th scope="row">Exclude</th><td>Not a resource</td><td>5</td></tr></tbody></table></div>
+<p>Triage also set a dossier type. Software, hardware, kits, platforms, and models got full dossiers. Lessons, curricula, unplugged activities, and courses got light dossiers. The split was 1,052 full and 664 light.</p>
+<p>Later steps removed 75 more items from the site. 25 were discontinued with no legacy support. The other 50 were manual exclusions with a written reason. Examples are retired products, archived lessons, and placeholder pages. A product no longer sold but still supported is labeled legacy and stays. LEGO SPIKE, with app support to 2031, is one example. That leaves 1,641 items on the site.</p>
+<h2 id="dossier-schema">Dossier schema</h2>
+<p>Each included item got a dossier. A dossier is a YAML fact sheet with short notes. Its fields cover the item type, domains, description, key features, AI functions, and where AI runs. A data-flow block records where the tool runs, account needs, internet needs, student data collected, and its destination. Other fields cover license, cost, platforms, setup steps, interface, grade claims, languages, classroom uses, lessons, evidence, popularity signals, maintenance, sources, and confidence.</p>
+<p>Full dossiers required the official site, the docs, and the privacy policy for any software or connected device. They also needed one independent source from a web search. Light dossiers required the official page and at least one real lesson page. Agents could then name the tools, devices, and accounts each lesson needs. Light dossiers skip hardware, repository, and maintenance fields. They add duration and standards.</p>
+<h3 id="honesty-rules">Honesty rules</h3>
+<ul>
+<li>Sources may list only pages the agent fetched and read.</li>
+<li>A fact seen only in a search snippet carries a snippet tag in its source note.</li>
+<li>Enum fields never take a guess. Unknown facts stay "unknown." Doubts go into open questions.</li>
+<li>Classroom uses list documented uses only. Capabilities never count as uses.</li>
+<li>A failed fetch counts as no evidence.</li>
+</ul>
+<h3 id="the-thin-rule">The THIN rule</h3>
+<p>The validator flags a dossier as THIN with fewer than 2 distinct source URLs. Agents were told never to repeat a URL to pass. A THIN result is an accepted, honest outcome. THIN items stay in the inventory with a limited information label.</p>
+<h3 id="follow-up-pass">Follow-up pass</h3>
+<p>The first validation found 1,612 valid dossiers and 104 THIN ones. A script then built a follow-up list. A targeted pass covered 197 items. Flags included widely used items with weak evidence, THIN items, low-confidence popular items, and items with values copied from discovery notes. Agents had up to 4 web searches per item. They also tried archives, help centers, app stores, and the student data privacy agreement registry. They had to verify copied values or reset them to unknown. After the pass, THIN dossiers fell from 104 to 19. The final validator reports 1,697 valid dossiers, 19 THIN, and none missing. A script also filled Wikipedia links. Early lookups had failed for lack of a User-Agent header.</p>
+<h2 id="rule-based-classification">Rule-based classification</h2>
+<p>A rule script reads only the dossiers. A missing or unknown input never produces a confident value. It produces Unverified or Unknown. This design biases the privacy labels toward caution.</p>
+<h3 id="privacy-level-2">Privacy level</h3>
+<p>The rules run in order. The first match wins. Site names appear first, then the internal code.</p>
+<ol>
+<li>No device needed, or paper. The tool runs on paper only, and the data destination is none.</li>
+<li>Unverified. The data destination is unknown or blank. A dossier note saying values came from discovery notes also triggers it.</li>
+<li>Sends student data to a company, or red. The destination is the vendor or a third party. AI running in the vendor cloud also triggers it.</li>
+<li>Stays on a school server, or blue. The destination is a school server.</li>
+<li>Local with optional cloud or accounts, or yellow. The destination is mixed. An optional or required account also triggers it.</li>
+<li>Stays on the device, or green. The destination is the device or none, and no account is needed.</li>
+<li>Anything left over is Unverified.</li>
+</ol>
+<p>A product whose only cloud path is an optional add-on keeps its local rating. Its page names the add-on and tells the teacher how to leave it off. The privacy pass could later move a label toward caution. That step is described in the next section.</p>
+<h3 id="other-rules">Other rules</h3>
+<ul>
+<li>Internet need maps the dossier field directly. Unknown becomes Unverified. A tool reached only on the school network counts as offline.</li>
+<li>Youngest users runs a pattern search over the privacy notes, description, open questions, and accessibility notes. Patterns for 18, 16, and 13 run in that order. The highest match wins. A 13 match is skipped next to parental consent, junior account, or teacher-created account language. Any age requires no account and a known run location. Data must also stay on the device or go nowhere. All else is Unknown.</li>
+<li>Cost reads the price fields and cost notes. Free needs zero prices or a free note with no paid terms. Subscription or per-seat language gives Paid license. Other items use bands on the lowest typical price, under $50, $50 to $200, or over $200. No price gives Unknown.</li>
+<li>Open source, resource type, and platforms map dossier fields. Partial open source counts as open-source software.</li>
+<li>AI capability uses keyword groups over the AI functions and model fields. Examples are chat for text, diffusion for images, and pose for vision.</li>
+<li>Status reads the maintenance field, a status override file, and a legacy file. Discontinued items without legacy support leave the site.</li>
+<li>Classroom evidence picks the strongest of four levels. A peer-reviewed entry gives the top level. A case study or a sourced classroom use gives documented use. Listed lessons alone give vendor examples. All else is undocumented.</li>
+<li>Evidence confidence is limited for fewer than 2 distinct sources or low agent confidence. High confidence gives well documented. All else is partly documented.</li>
+</ul>
+<h2 id="popularity-formula">Popularity formula</h2>
+<p>Popularity is a fixed formula. Each part is scaled from 0 to 1 by dividing by its maximum across all 1,716 classified items. The weights sum to 1.</p>
+<div class="table-wrap"><table class="compare"><thead><tr><th scope="col">Part</th><th scope="col">Scaling</th><th scope="col">Weight</th></tr></thead><tbody><tr><th scope="row">Mentions by other items in the inventory</th><td>log of 1 plus count</td><td>0.30</td></tr><tr><th scope="row">GitHub stars</th><td>log of 1 plus stars</td><td>0.20</td></tr><tr><th scope="row">Discovery count</th><td>raw count</td><td>0.15</td></tr><tr><th scope="row">Wikipedia article exists</th><td>1 or 0</td><td>0.15</td></tr><tr><th scope="row">Documented classroom uses</th><td>raw count</td><td>0.10</td></tr><tr><th scope="row">Query groups that found the item</th><td>raw count</td><td>0.10</td></tr></tbody></table></div>
+<p>The protocol names the last part curated-list mentions. The script approximates it with the number of discovery groups that found the item. Discovery count carries less weight by design. Later rounds skipped items already found. The count therefore undercounts famous tools. Live search ranking changes daily. The formula leaves it out for that reason.</p>
+<p>Mentions count how many other dossiers name the item. The match is case sensitive and needs a whole phrase. It uses the display name without parenthetical text, plus the item's aliases. Names under 4 characters are skipped. A list of common words is skipped too. Lowercase single-word aliases are skipped. Aliases that equal another item's name are skipped too. Each other dossier counts once. Lessons and kits name the tools they use. Classroom staples such as Scratch and micro:bit rank high as a result.</p>
+<h2 id="related-products">Related products</h2>
+<p>Each on-site item lists up to 6 related items. The score for a pair has three parts, each scaled from 0 to 1.</p>
+<div class="table-wrap"><table class="compare"><thead><tr><th scope="col">Part</th><th scope="col">Method</th><th scope="col">Weight</th></tr></thead><tbody><tr><th scope="row">Tag overlap</th><td>Weighted Jaccard over six label sets</td><td>0.45</td></tr><tr><th scope="row">Text similarity</th><td>TF-IDF cosine over name, description, and key features</td><td>0.40</td></tr><tr><th scope="row">Companion bonus</th><td>1 for a dossier naming the other item, else 0</td><td>0.15</td></tr></tbody></table></div>
+<p>The tag weights are subjects 3, tech type 2, AI capability 2, grade band 1, learning purpose 1, and resource type 1. The No AI capability value is ignored. For each set, the overlap is the shared values over the union. The weighted sum is divided by the total weight of sets with any values.</p>
+<p>Text vectors use word counts with sublinear term weights. Each word gets 1 plus the log of its count, times the log of the inverse document frequency. Common stop words are dropped. Words found in 30% or more of items are dropped. Companion links use a whole-name match of 5 or more characters, in either direction. Ties break on popularity, then on the item ID. The script uses no randomness and no network.</p></div></details>
+
+<details class="expand"><summary>Advanced technical methods: rubric scoring and agreement statistics (select to expand)</summary><div class="expand-body"><h2 id="rubric-classification">Rubric classification</h2>
+<p>Agents scored the judgment labels in 83 batches of about 20 items. They used only the batch extract and the dossier. They had no web access. Each score had to cite the dossier field or phrase behind it. A validator checked every value. It also checked that each band matched its point total.</p>
+<h3 id="student-ease">Student ease</h3>
+<p>Five factors each score 0, 1, or 2. A total of 0 to 2 is easy. A total of 3 to 5 is moderate. A total of 6 or more is advanced.</p>
+<div class="table-wrap"><table class="compare"><thead><tr><th scope="col">Factor</th><th scope="col">0 points</th><th scope="col">1 point</th><th scope="col">2 points</th></tr></thead><tbody><tr><th scope="row">Interface</th><td>Paper, tangible, chat, or any GUI</td><td>Blocks or icons</td><td>Typed code or command line</td></tr><tr><th scope="row">Reading load</th><td>Pictures or few words</td><td>Ordinary tutorials</td><td>Developer reference only</td></tr><tr><th scope="row">Steps to first success</th><td>Under 10 minutes</td><td>One class period</td><td>More than one period</td></tr><tr><th scope="row">Hardware assembly</th><td>None</td><td>No-solder build</td><td>Breadboard wiring or soldering</td></tr><tr><th scope="row">Abstract concepts</th><td>Concrete</td><td>Programming or model training</td><td>Formal math or theory</td></tr></tbody></table></div>
+<p>The table shows the revised anchors. The first-pass wording was looser.</p>
+<h3 id="other-rubric-labels">Other rubric labels</h3>
+<ul>
+<li>Teacher learning curve uses the same five factors plus a setup factor from 0 to 2. Strong lesson materials subtract 1. The same bands apply.</li>
+<li>AI beginner is yes under four conditions. The tool teaches or visibly uses AI. Student ease is easy or moderate. Setup takes minutes or about an hour. The tool gives clear feedback on what the AI did. Tools with no AI are always no.</li>
+<li>IT involvement has four levels. None covers paper and web tools with no install or account. Teacher can install covers app store apps, teacher-account web tools, and plug-in hardware. IT installs it covers managed desktop installs, firmware flashing, and district agreements. Needs a server admin covers self-hosted servers and multi-user model runtimes.</li>
+<li>Setup time counts work after the item is in hand. Minutes means a class could start the same day. About an hour means one prep session, such as installs, accounts, charging, or class-set flashing. A day or more means kit builds, lab-wide toolchain imaging, servers, or district identity integration.</li>
+<li>Subjects take 1 to 5 of 14 school subjects. Each needs a one-sentence reason. Computer science is assigned only for coding, computing, or study of how computers or AI work.</li>
+<li>Grade bands start from the claimed range and documented uses. A band is added only for a fit in reading load and ease.</li>
+<li>Learning purpose marks learning about AI and computing, using them in another subject, or both.</li>
+</ul>
+<h2 id="double-coding-sample">Double-coding sample</h2>
+<p>A script drew a fixed-seed 10% random sample. The seed was 20261119. The sample held 160 items. A second model scored them on its own from the same extracts. Agreement used three statistics.</p>
+<ul>
+<li>Cohen's kappa for nominal labels.</li>
+<li>Quadratic weighted kappa for the ordered three-band labels.</li>
+<li>Mean per-value Cohen's kappa for the multi-value sets. Each value is treated as a yes or no call.</li>
+</ul>
+<p>The target was 0.7. A lower value triggered a rubric revision and a re-run.</p>
+<h3 id="first-pass-agreement">First-pass agreement</h3>
+<div class="table-wrap"><table class="compare"><thead><tr><th scope="col">Dimension</th><th scope="col">Statistic</th><th scope="col">Value</th><th scope="col">Met 0.7</th></tr></thead><tbody><tr><th scope="row">Student ease</th><td>Weighted kappa</td><td>0.67</td><td>No</td></tr><tr><th scope="row">Teacher learning curve</th><td>Weighted kappa</td><td>0.76</td><td>Yes</td></tr><tr><th scope="row">Setup time</th><td>Weighted kappa</td><td>0.68</td><td>No</td></tr><tr><th scope="row">AI beginner</th><td>Cohen's kappa</td><td>0.77</td><td>Yes</td></tr><tr><th scope="row">IT involvement</th><td>Cohen's kappa</td><td>0.78</td><td>Yes</td></tr><tr><th scope="row">Grade bands</th><td>Mean per-value kappa</td><td>0.83</td><td>Yes</td></tr><tr><th scope="row">Subjects</th><td>Mean per-value kappa</td><td>0.61</td><td>No</td></tr></tbody></table></div>
+<p>Teacher learning curve passed on the weighted statistic. Its unweighted kappa was 0.63. Exact agreement was 77%, and agreement within one band was 100%. We judged ordered labels by the weighted statistic. Other analysts might choose differently.</p>
+<h2 id="adjudication">Adjudication</h2>
+<p>An adjudicator reviewed 75 items where the two coders disagreed on student ease or setup time. It made a final call on each. Steps caused the most factor splits, at 35. Interface followed at 31, abstract at 25, reading at 15, and assembly at 11. Setup splits were 29 between minutes and hour and 20 between hour and days. The band itself differed on 39 items.</p>
+<p>The adjudicator found four main causes. One coder scored complex GUIs higher on interface. The coders blurred first success, unit length, and teacher setup. They split on whether student or admin work counts. They also split on blocks programming as abstract or concrete.</p>
+<h2 id="anchor-revision">Anchor revision</h2>
+<p>The adjudicator wrote sharper anchors from these cases. Four general rules lead the anchor file.</p>
+<ol>
+<li>Score only the student's experience. Teacher and IT work count only in setup time and the teacher rubric.</li>
+<li>For mixed items, score the mode the resource's own lessons use. Pick the lowest programming mode that beginners can use.</li>
+<li>Score the default path in the dossier. Optional extras never raise a score.</li>
+<li>Infer an unknown field from the named platform.</li>
+</ol>
+<p>Factor anchors followed. Any GUI scores 0 on interface, however complex. First success means the first visible working result. A long unit alone never sets steps to 2. Setup time excludes purchase, shipping, and license approval. Each level lists worked examples from the adjudicated items.</p>
+<h2 id="re-score">Re-score</h2>
+<p>All items were re-scored for student ease and setup time. Sonnet agents ran 42 batches of about 40 items with the new anchors. The validator then reported 0 problems. The project lead made consistency fixes afterward. Pip-only or conda-only installs across a lab became a day or more. Twine and similar link-based story tools became interface 1 and abstract 0. These rules were added to the anchor file.</p>
+<p>Early first-pass batches had counted purchase time as setup. That error could push hardware toward a day or more. It could also wrongly set AI beginner to no. A targeted recheck covered those hardware items. A separate review covered AI beginner calls.</p>
+<h2 id="post-revision-agreement">Post-revision agreement</h2>
+<div class="table-wrap"><table class="compare"><thead><tr><th scope="col">Dimension</th><th scope="col">Weighted kappa</th><th scope="col">Exact match</th><th scope="col">n</th></tr></thead><tbody><tr><th scope="row">Student ease</th><td>0.78</td><td>79%</td><td>75</td></tr><tr><th scope="row">Setup time</th><td>0.87</td><td>91%</td><td>75</td></tr></tbody></table></div>
+<p>These figures compare the re-score with the adjudicator's final calls. Both pass 0.7. The test has a weakness. The adjudicator wrote the anchors from these same 75 items. The test is therefore not independent. It likely overstates agreement on new items. The log records no fresh double-coding after the revision.</p>
+<p>The audit report in the workspace was regenerated after the re-score. It compares current labels with the second coder's original codes. In that comparison, student ease is 0.55 weighted. Setup time is 0.68, and AI beginner is 0.80. The second coder used the old anchors. Lower agreement with that coder is expected for re-scored labels.</p>
+<p>Subjects stayed below target at 0.61. The project lead kept subject tags as they stand at Checkpoint 2. Each page shows the reason behind each subject tag. Subject counts carry this uncertainty. The lead also reviewed a classified sample at that checkpoint.</p></div></details>
+
+<details class="expand"><summary>Advanced technical methods: pages, quality checks, and site (select to expand)</summary><div class="expand-body"><h2 id="content-generation">Content generation</h2>
+<p>Content agents wrote one page per item. They used only the batch extract and the dossier. They had no web access. The brief banned invented features, prices, studies, ages, and standards. Unknown facts stay unknown.</p>
+<p>Each page has eight sections in a fixed order. These are the overview, benefits for students, teachers, and schools, a getting-started checklist, the AI section, privacy and safety, and ideas by subject. The checklist has 5 to 8 steps. It must include any security step the dossier supports. Examples are changing a default password and turning off telemetry. Each tagged subject gets exactly 5 activity ideas. The writing level targets about grade 8.</p>
+<p>Agents wrote 110 batches of 15 items. The content validator checks the front matter and section order. It also checks bullet and checklist counts, one subject section per tag, five ideas each, no extra subjects, no URLs in prose, and a minimum length. It runs the style linter and allows 0 errors. The linter flags dashes, semicolons, banned subordinate openers, negative parallelism, bold lead-ins, and stock lead-ins. It warns on hype words, parenthetical asides, and long or multi-clause sentences. All 1,641 pages pass with 0 problems.</p>
+<h2 id="privacy-pass">Privacy pass</h2>
+<p>The first fact-check found dropped privacy caveats. The cause was the page writers' input. They saw only a summary of each dossier. A privacy pass then re-checked all 1,641 pages against the full dossiers.</p>
+<p>Agents fixed five kinds of problems.</p>
+<ul>
+<li>A claim more reassuring than the dossier supports.</li>
+<li>A missing caveat from the data flow, open questions, or notes.</li>
+<li>COPPA language misread as an age limit.</li>
+<li>Unverified facts stated as fact.</li>
+<li>An understated claim, such as a signed privacy agreement left out.</li>
+</ul>
+<p>Agents rewrote each privacy section as 3 to 5 sentences. They also flagged labels that looked wrong. A script applied every flag that moved a label toward caution. The order of caution for privacy runs from paper and device, to school server, to optional cloud, to unverified, to company. Internet need runs from offline, to setup only, to always or unverified. Age runs from any, to unknown, to 13, 16, and 18. Flags toward less caution went to the project lead. The pass applied 240 cautious labels automatically. The lead decided 12 more.</p>
+<h2 id="minimum-age-audit">Minimum-age audit</h2>
+<p>The first age rule read "under 13" COPPA language as an age floor. That language is a data rule. Many such products are built for children. The rule was fixed to skip 13 next to parental consent language. Agents then audited 103 items. They read every dossier sentence that mentions an age. Their calls went into an age override file. The rule script applies that file.</p>
+<h2 id="fact-checks">Fact-checks</h2>
+<p>Each check compared 40 random pages line by line with their dossiers and classification rows. Checkers used no web sources. A serious issue meant a false privacy or safety claim, or a false core fact.</p>
+<div class="table-wrap"><table class="compare"><thead><tr><th scope="col">Sample</th><th scope="col">Timing</th><th scope="col">Clean pages</th><th scope="col">Minor only</th><th scope="col">Serious issues</th><th scope="col">Minor issues</th></tr></thead><tbody><tr><th scope="row">1</th><td>Before the privacy pass</td><td>18</td><td>20</td><td>2</td><td>24</td></tr><tr><th scope="row">2</th><td>After the privacy pass</td><td>23</td><td>17</td><td>0</td><td>21</td></tr></tbody></table></div>
+<p>The two serious issues in sample 1 were about privacy. One page turned COPPA language into a minimum age of 13. Another page said a kit needed internet only at setup. Its speech feature uses a cloud service during use. Minor issues included dropped caveats and overclaimed AI links. All 47 issue rows were fixed or already resolved.</p>
+<p>Both reports also listed rubric judgments stated as facts. Examples are "easy to learn" and "setup takes days." These match the classification and were not counted as errors. A reader still cannot tell they are estimates.</p>
+<p>These checks have limits. They covered 80 of 1,641 pages. They tested pages against dossiers only. Nobody re-checked the dossiers against the live web.</p>
+<h2 id="link-checking">Link checking</h2>
+<p>A link checker tested every outbound URL the site shows. These include official URLs, more-info links, and sources. Each URL got a GET request with redirects, reading the first 200 KB. The checker assigned four flags.</p>
+<ul>
+<li>Dead means HTTP 404 or 410, a DNS failure, or a refused connection.</li>
+<li>Error means other HTTP errors or timeouts. Most were bot blocking.</li>
+<li>Moved host means the final host differs from the original beyond www or https.</li>
+<li>Parked means page text looks like a parked, for-sale, gambling, or adult domain.</li>
+</ul>
+<div class="table-wrap"><table class="compare"><thead><tr><th scope="col">Result</th><th scope="col">URLs</th></tr></thead><tbody><tr><th scope="row">Checked</th><td>4,971</td></tr><tr><th scope="row">Dead</th><td>157</td></tr><tr><th scope="row">Error, kept for hand review</th><td>717</td></tr><tr><th scope="row">Moved host</th><td>98</td></tr><tr><th scope="row">Parked or suspicious</th><td>210</td></tr></tbody></table></div>
+<p>All 157 dead links went into a blocklist. The build hides blocklisted links. Error links stay on the site. The parked flag produced many false positives, such as PDF files and research papers. Hand review confirmed several hijacked or repurposed domains. Examples are beetleblocks.com, drjava.org, gandi.studio, aerobot.org, poppy-education.org, and squeakland.org. The site never links them. Pages point to working alternatives where the dossier names one.</p>
+<h2 id="image-sourcing">Image sourcing</h2>
+<p>The protocol put openly licensed images first. A script searched Wikimedia Commons for each item. Its match rate was low. A second script tried Wikipedia lead images. Wikimedia throttled the downloads and stopped it. The project lead chose to launch with local category icons. The site shows icons for that reason. The photo script can run again later.</p>
+<h2 id="site-construction">Site construction</h2>
+<p>The site is a static folder with no database. A build script renders every page from Markdown sources. It also writes a JSON index for the explorer. The build produces 1,645 pages. The site can be embedded in WordPress through a shortcode plugin. It is hosted on GitHub Pages.</p>
+<p>The site makes no third-party requests. Scripts, styles, and icons all load from the site itself. It has no ads, trackers, or analytics. My List lives only in the visitor's browser. Each page sets this Content Security Policy.</p>
+<ul>
+<li>default-src 'self'</li>
+<li>img-src 'self' data:</li>
+<li>style-src 'self'</li>
+<li>script-src 'self'</li>
+<li>object-src 'none'</li>
+<li>base-uri 'self'</li>
+<li>form-action 'none'</li>
+<li>connect-src 'self'</li>
+</ul>
+<p>The server config adds frame-ancestors. It allows framing only by the site itself and trailblazerlab.org.</p>
+<p>An accessibility script checks every page. It tests each text and background color pair in light and dark modes against WCAG AA contrast of 4.5 to 1. It checks for a lang attribute, one h1, a main landmark, and a skip link. It also checks heading order, image alt text, form labels, unique IDs, and button names. The final build had 0 problems. Reflow passed at 320 and 768 pixels. My List, share links, and the WordPress embed were tested in Chrome.</p>
+<h2 id="reproducibility">Reproducibility</h2>
+<p>The pipeline lives in a private workspace. Only the built site is public. Researchers who want the pipeline files can ask through <a href="https://www.trailblazerlab.org" rel="noopener noreferrer">trailblazerlab.org</a>. The workspace holds these parts.</p>
+<ul>
+<li>A research protocol, a taxonomy, a style guide, and a runbook.</li>
+<li>The agent briefs for every stage and round.</li>
+<li>Config files for the query matrix, dossier schema, label vocabulary, and aliases.</li>
+<li>Override files for status, legacy products, site exclusions, labels, minimum ages, and blocked links.</li>
+<li>Raw round outputs, query logs, the candidate list, triage decisions, and every dossier.</li>
+<li>Rubric outputs, double-code outputs, adjudication calls, and re-score outputs.</li>
+<li>Reports on saturation, triage, dossier validation, agreement, fact-checks, links, and gaps.</li>
+</ul>
+<p>The scripts form a chain. A query builder expands the matrix. A merge script deduplicates and computes saturation. A triage checker writes the dossier manifest. A dossier validator and a follow-up selector come next. The rule script assigns labels and popularity. Helper scripts count mentions and look up Wikipedia articles. A batch maker draws the fixed-seed sample. A rubric validator computes agreement. A content batch maker, a content validator, and the style linter check pages. A flag script applies cautious labels. Further scripts compute related items, check links, check accessibility, and build the site.</p>
+<p>The rule, mention, and related-item scripts are deterministic. The double-code sample uses a fixed seed. The agent stages are not deterministic. Web search results also vary by date and engine. A re-run will find a somewhat different set of items. The protocol describes a re-run. Archive the research folder with a date. Edit the query matrix and raise its version. Then follow the runbook from the top. The merge script compares the new list with the archive and reports retired and new items.</p></div></details>
+</div>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <p>An AI-assisted experiment by Jeremy Riel, PhD, UIC TRAILblazer Lab. Some content was written with generative AI and may contain errors. Check details with each provider before use.</p>
+    <p><a href="about.html">About this project</a> · <a href="methods.html">How we built it</a> · <a href="why.html">Why AI That Stays in School?</a></p>
+  </div>
+</footer>
+</body>
+</html>

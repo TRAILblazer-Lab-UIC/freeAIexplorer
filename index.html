@@ -7,16 +7,16 @@
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <title>Free AI Explorer: Explore free and local AI tools for schools</title>
 <meta name="description" content="Find free, local, and privacy-friendly AI, computing, and robotics tools for K-12 classrooms.">
-<link rel="stylesheet" href="assets/css/site.css?v=5082ebcb03">
+<link rel="stylesheet" href="assets/css/site.css?v=c5ed5ba238">
 <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
-<script src="assets/js/common.js?v=5082ebcb03" defer></script><script src="assets/js/explorer.js?v=5082ebcb03" defer></script>
+<script src="assets/js/common.js?v=c5ed5ba238" defer></script><script src="assets/js/explorer.js?v=c5ed5ba238" defer></script>
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to main content</a>
 <header class="site-header">
   <div class="wrap header-inner">
     <a class="brand" href="index.html"><svg class="brand-icon" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false"><path d="M9 4h6v3H9zM6 7h12v11H6zM9 11h.01M15 11h.01M9 15h6M12 2v2M3 11v3M21 11v3" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Free AI Explorer</span></a>
-    <nav aria-label="Main"><ul class="nav"><li><a href="index.html" aria-current="page">Explore</a></li><li><a href="why.html">Why Use Free AI?</a></li><li><a href="mylist.html">My List <span class="count" data-list-count></span></a></li><li><a href="about.html">About</a></li></ul></nav>
+    <nav aria-label="Main"><ul class="nav"><li><a href="index.html" aria-current="page">Explore</a></li><li><a href="why.html">Why AI That Stays in School?</a></li><li><a href="mylist.html">My List <span class="count" data-list-count></span></a></li><li><a href="methods.html">Methods</a></li><li><a href="about.html">About</a></li></ul></nav>
   </div>
 </header>
 <main id="main" tabindex="-1">
@@ -28,6 +28,43 @@
       <span class="beginner-title">For AI Beginners</span>
       <span class="beginner-sub">Show easy tools where students can see AI at work</span>
     </button>
+    <details class="howto">
+      <summary>How to use this site</summary>
+      <div class="howto-body">
+        <ol>
+          <li>New to AI? Press <strong>For AI Beginners</strong>. You will see easy tools where students can watch AI at work.</li>
+          <li>Open <strong>I'm looking for something specific</strong>. Pick your grade, subject, devices, internet, budget, and privacy needs. The best matches rise to the top.</li>
+          <li>Narrow the list with the filters. Choose a type of technology, a subject, or a kind of resource such as a lesson or a robot.</li>
+          <li>Read the badges on each card. The colored badge shows where student data goes. Green means it stays on the device.</li>
+          <li>Open a tool page. Each page explains the tool in plain words. It lists benefits, a setup checklist, privacy notes, and five ideas for each subject.</li>
+          <li>Select the star to save a tool to <a href="mylist.html">My List</a>. Print a "Try It Out" plan or share your list with a colleague.</li>
+        </ol>
+        <p>Every page was researched and written with help from AI. Check details with each provider before class. Read <a href="why.html">why AI that stays in school matters</a> or <a href="methods.html">how we built this site</a>.</p>
+      </div>
+    </details>
+  </div>
+</section>
+
+<section class="why-band" aria-labelledby="why-heading">
+  <div class="wrap">
+    <h2 id="why-heading">Why choose AI that stays in your school?</h2>
+    <p class="lead">Most AI chat tools send every word to a company's computers. Local AI runs on devices your school already owns. Student work stays in the room.</p>
+    <div class="table-wrap">
+      <table class="compare">
+        <caption class="visually-hidden">Company cloud AI compared with AI that stays in your school</caption>
+        <thead>
+          <tr><th scope="col">Question</th><th scope="col">Company cloud AI</th><th scope="col">AI that stays in your school</th></tr>
+        </thead>
+        <tbody>
+          <tr><th scope="row">Where does it run?</th><td>On company servers far away</td><td>On school laptops, tablets, robots, or a school server</td></tr>
+          <tr><th scope="row">Where do student words go?</th><td>To the company</td><td>They stay in the room</td></tr>
+          <tr><th scope="row">Does it need the internet?</th><td>Always</td><td>Often only for setup, or not at all</td></tr>
+          <tr><th scope="row">Are there age limits?</th><td>Often 13 and up, sometimes 18 and up</td><td>Usually no account and no age limit</td></tr>
+          <tr><th scope="row">What does it cost?</th><td>Often a fee per student or per year</td><td>Often free</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="why-cta"><a class="btn btn-primary" href="why.html">Learn the basics in 5 minutes</a> <span class="muted">Plain words. No technical background needed.</span></p>
   </div>
 </section>
 
@@ -37,7 +74,7 @@
     <input type="search" id="q" name="q" autocomplete="off" placeholder="Try robots, poetry, or speech">
   </div>
 
-  <details class="needs" id="needs">
+  <details class="needs" id="needs" open>
     <summary>I'm looking for something specific</summary>
     <p class="muted">Pick what fits your class. The best matches rise to the top of the list.</p>
     <div class="needs-grid">
@@ -132,7 +169,7 @@
 <footer class="site-footer">
   <div class="wrap">
     <p>An AI-assisted experiment by Jeremy Riel, PhD, UIC TRAILblazer Lab. Some content was written with generative AI and may contain errors. Check details with each provider before use.</p>
-    <p><a href="about.html">About this project</a> · <a href="why.html">Why Use Free AI?</a></p>
+    <p><a href="about.html">About this project</a> · <a href="methods.html">How we built it</a> · <a href="why.html">Why AI That Stays in School?</a></p>
   </div>
 </footer>
 </body>

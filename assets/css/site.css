@@ -95,6 +95,39 @@ input[type="checkbox"] { width: 20px; height: 20px; accent-color: var(--brand); 
 .beginner-btn[aria-pressed="true"] { outline: 4px solid var(--focus); outline-offset: 3px; }
 .beginner-btn[aria-pressed="true"] .beginner-title::after { content: " is on"; font-weight: 600; font-size: 1.1rem; }
 
+/* How to use and expandable sections */
+.howto { margin-top: 14px; max-width: 760px; background: var(--bg); border: 2px solid var(--brand); border-radius: var(--radius); }
+.howto summary, .expand summary { cursor: pointer; font-weight: 700; padding: 10px 14px; min-height: 44px; display: list-item; }
+.howto-body { padding: 0 18px 10px; }
+.howto-body li { margin: 6px 0; }
+.expand { border: 1px solid var(--border); border-radius: var(--radius); background: var(--surface); margin: 18px 0; }
+.expand summary { font-size: 1.1rem; }
+.expand-body { padding: 0 18px 12px; }
+.expand-body h2 { border-top: 0; font-size: 1.2rem; }
+
+/* Why band and comparison tables */
+.why-band { background: var(--surface); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 20px 0 24px; margin-bottom: 8px; }
+.why-band h2 { margin-top: 0; font-size: clamp(1.35rem, 1.1rem + 1vw, 1.8rem); }
+.table-wrap { overflow-x: auto; margin: 12px 0; }
+.compare { width: 100%; border-collapse: collapse; background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius); font-size: 1rem; }
+.compare th, .compare td { text-align: left; vertical-align: top; padding: 10px 12px; border-bottom: 1px solid var(--border); }
+.compare thead th { background: var(--surface-2); font-weight: 700; }
+.compare thead th:nth-child(2) { color: var(--r-tx); }
+.compare thead th:nth-child(3) { color: var(--g-tx); }
+.compare tbody th { font-weight: 600; width: 28%; }
+.compare tbody td:nth-child(3) { background: var(--g-bg); color: var(--g-tx); }
+.why-cta { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px; margin: 14px 0 0; }
+.btn-primary { background: var(--brand); color: var(--brand-ink); border-color: var(--brand); text-decoration: none; font-weight: 700; }
+.btn-primary:hover { filter: brightness(1.08); }
+@media (max-width: 640px) {
+  .compare thead { display: none; }
+  .compare, .compare tbody, .compare tr, .compare th, .compare td { display: block; width: 100%; }
+  .compare tr { border-bottom: 2px solid var(--border); }
+  .compare tbody td::before { display: block; font-size: .85rem; font-weight: 700; }
+  .compare tbody td:nth-child(2)::before { content: "Company cloud AI"; color: var(--r-tx); }
+  .compare tbody td:nth-child(3)::before { content: "AI that stays in your school"; }
+}
+
 /* Explorer layout */
 .search-row { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px; margin: 20px 0 12px; }
 .search-label { font-weight: 700; }
