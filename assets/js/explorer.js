@@ -1,4 +1,4 @@
-/* Free AI Explorer: faceted search, needs-based ranking, and the AI beginner toggle.
+/* Homegrown AI: faceted search, needs-based ranking, and the AI beginner toggle.
    Data: data/products.json (same origin). DOM text uses textContent only. State lives in the URL hash. */
 (function () {
   'use strict';

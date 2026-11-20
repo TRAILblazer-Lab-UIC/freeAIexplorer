@@ -1,7 +1,7 @@
 <?php
 /**
- * Plugin Name: Free AI Explorer Embed
- * Description: Embeds the Free AI Explorer static site with the shortcode [free_ai_explorer src="https://example.org/freeAIexplorer/"]. The iframe resizes to fit its content.
+ * Plugin Name: Homegrown AI Embed
+ * Description: Embeds the Homegrown AI static site with the shortcode [homegrown_ai src="https://example.org/freeAIexplorer/"]. The iframe resizes to fit its content.
  * Version: 1.0.0
  * Author: UIC TRAILblazer Lab
  * Author URI: https://www.trailblazerlab.org
@@ -34,7 +34,7 @@ function fae_shortcode( $atts ) {
 	$atts = shortcode_atts(
 		array(
 			'src'    => '',
-			'title'  => 'Free AI Explorer',
+			'title'  => 'Homegrown AI',
 			'height' => '1200',
 		),
 		$atts,
@@ -43,7 +43,7 @@ function fae_shortcode( $atts ) {
 	$src = fae_clean_src( $atts['src'] );
 	if ( '' === $src ) {
 		return current_user_can( 'edit_posts' )
-			? '<p>' . esc_html__( 'Free AI Explorer: add a valid https src address to the shortcode.', 'free-ai-explorer' ) . '</p>'
+			? '<p>' . esc_html__( 'Homegrown AI: add a valid https src address to the shortcode.', 'free-ai-explorer' ) . '</p>'
 			: '';
 	}
 	$height = max( 400, min( 20000, absint( $atts['height'] ) ) );
@@ -62,4 +62,5 @@ function fae_shortcode( $atts ) {
 		$height
 	);
 }
-add_shortcode( 'free_ai_explorer', 'fae_shortcode' );
+add_shortcode( 'free_ai_explorer', 'fae_shortcode' ); // original name, kept for existing pages
+add_shortcode( 'homegrown_ai', 'fae_shortcode' );

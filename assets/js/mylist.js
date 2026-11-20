@@ -83,7 +83,7 @@
   }
   function base() { return location.href.replace(/mylist\.html.*$/, ''); }
   function toMarkdown() {
-    var out = ['# My Free AI Explorer list', ''];
+    var out = ['# My Homegrown AI list', ''];
     items.forEach(function (it) {
       out.push('## ' + it.n, '', it.t || '', '', 'Student data: ' + (PRIV[it.priv] || it.priv), '');
       (it.steps || []).forEach(function (s) { out.push('- [ ] ' + s); });
@@ -114,12 +114,12 @@
     $('print-list').addEventListener('click', function () { window.print(); });
     $('dl-md').addEventListener('click', function () {
       if (!items.length) return status('Your list is empty.');
-      download('my-free-ai-list.md', 'text/markdown', toMarkdown());
+      download('my-homegrown-ai-list.md', 'text/markdown', toMarkdown());
       status('Markdown file downloaded.');
     });
     $('dl-csv').addEventListener('click', function () {
       if (!items.length) return status('Your list is empty.');
-      download('my-free-ai-list.csv', 'text/csv', '﻿' + toCSV());
+      download('my-homegrown-ai-list.csv', 'text/csv', '﻿' + toCSV());
       status('Spreadsheet file downloaded.');
     });
     $('copy-link').addEventListener('click', function () {

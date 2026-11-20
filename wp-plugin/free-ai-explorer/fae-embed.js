@@ -1,4 +1,4 @@
-/* Free AI Explorer embed: resize iframes from height messages. Messages are accepted only from the iframe's own origin and window. */
+/* Homegrown AI embed: resize iframes from height messages. Messages are accepted only from the iframe's own origin and window. */
 (function () {
   'use strict';
   window.addEventListener('message', function (e) {
