@@ -311,3 +311,20 @@ input[type="checkbox"] { width: 20px; height: 20px; accent-color: var(--brand); 
   a { color: #000; }
   .plan-title a::after { content: ""; }
 }
+
+/* Key terms on tool pages */
+.key-terms { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 2px 18px 10px; margin-top: 24px; }
+.key-terms h2 { margin-top: 14px; }
+.kt-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 10px 18px; margin: 8px 0; }
+.kt dt { font-weight: 700; }
+.kt dd { margin: 2px 0 0; font-size: .95rem; color: var(--muted); }
+
+/* Glossary page */
+.g-jump { display: flex; flex-wrap: wrap; gap: 6px 12px; margin: 12px 0; font-weight: 700; }
+.g-jump a { display: inline-block; min-width: 28px; min-height: 28px; text-align: center; }
+.glossary .g-letter { border-top: 2px solid var(--brand); padding-top: .4em; }
+.g-entry { border-bottom: 1px solid var(--border); padding: 6px 0 12px; scroll-margin-top: 12px; }
+.g-entry h3 { margin: 10px 0 2px; }
+.g-entry:target { background: var(--surface); outline: 3px solid var(--focus); outline-offset: 4px; border-radius: 6px; }
+.g-cat { margin: 0 0 6px; font-size: .85rem; font-weight: 700; color: var(--muted); text-transform: uppercase; letter-spacing: .04em; }
+.g-label { font-weight: 700; }
