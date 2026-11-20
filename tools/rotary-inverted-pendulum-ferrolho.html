@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'; connect-src 'self'">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<title>Rotary Inverted Pendulum (Ferrolho) | Free AI Explorer</title>
+<meta name="description" content="A build-it-yourself Furuta pendulum that balances itself with a learned control policy.">
+<link rel="stylesheet" href="../assets/css/site.css?v=5082ebcb03">
+<link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
+<script src="../assets/js/common.js?v=5082ebcb03" defer></script><script src="../assets/js/tool.js?v=5082ebcb03" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="../index.html"><svg class="brand-icon" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false"><path d="M9 4h6v3H9zM6 7h12v11H6zM9 11h.01M15 11h.01M9 15h6M12 2v2M3 11v3M21 11v3" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Free AI Explorer</span></a>
+    <nav aria-label="Main"><ul class="nav"><li><a href="../index.html">Explore</a></li><li><a href="../why.html">Why Use Free AI?</a></li><li><a href="../mylist.html">My List <span class="count" data-list-count></span></a></li><li><a href="../about.html">About</a></li></ul></nav>
+  </div>
+</header>
+<main id="main" tabindex="-1">
+
+<div class="wrap tool">
+  <p class="crumbs"><a href="../index.html">Explore</a> <span aria-hidden="true">›</span> <span>Rotary Inverted Pendulum (Ferrolho)</span></p>
+  <div class="tool-head">
+    <div class="tool-figure placeholder" aria-hidden="true"><svg class="big-icon" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false"><path d="M4 8l8-4 8 4-8 4zM4 8v8l8 4 8-4V8M12 12v8" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+    <div class="tool-title">
+      <h1>Rotary Inverted Pendulum (Ferrolho)</h1>
+      <p class="tagline">A build-it-yourself Furuta pendulum that balances itself with a learned control policy.</p>
+      <div class="chips"><span class="chip"><svg class="chip-icon" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false"><path d="M9 4h6v3H9zM6 7h12v11H6zM9 11h.01M15 11h.01M9 15h6M12 2v2M3 11v3M21 11v3" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>AI</span><span class="chip"><svg class="chip-icon" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false"><path d="M8 8h8v8H8zM12 4v4M10 4h4M6 11H4v3h2M18 11h2v3h-2M10 12h.01M14 12h.01M9 19v2M15 19v2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Robotics</span></div>
+      <div class="actions"><button type="button" class="star-btn" data-star="rotary-inverted-pendulum-ferrolho" data-name="Rotary Inverted Pendulum (Ferrolho)" aria-pressed="false"><svg class="star-icon" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false"><path d="M12 3l2.8 5.7 6.2.9-4.5 4.4 1 6.2L12 17.3 6.5 20.2l1-6.2L3 9.6l6.2-.9z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="star-label">Add to My List</span></button></div>
+      
+      
+    </div>
+  </div>
+  
+  <div class="tool-grid">
+    <div class="tool-main">
+      <section class="tool-section " aria-labelledby="h-overview"><h2 id="h-overview">Overview</h2><p>This is a do-it-yourself rotary inverted pendulum, also called a Furuta pendulum. A reinforcement learning policy is trained in simulation, fine-tuned on the real rig, and then shrunk to run on an Arduino Nano. It suits advanced high school students and a teacher with electronics and Python skills. Students print, wire, and train the balancing arm.</p></section>
+      <section class="tool-section" aria-labelledby="h-benefits"><h2 id="h-benefits">Benefits</h2><div class="benefits"><div class="benefit"><h3>For students</h3><ul>
+<li>Students build a real machine from printed parts, a motor, and sensors.</li>
+<li>Students see a trained policy move from a simulation to physical hardware.</li>
+<li>Students watch a small Arduino keep a pendulum upright on its own.</li>
+</ul></div><div class="benefit"><h3>For teachers</h3><ul>
+<li>The repo holds a bill of materials and guides for printing, wiring, and first power-on.</li>
+<li>A training guide and an in-browser MuJoCo demo help a teacher preview the idea.</li>
+<li>The code and hardware files are open source.</li>
+</ul></div><div class="benefit"><h3>For schools</h3><ul>
+<li>The repo states about 20 GBP in parts.</li>
+<li>The finished pendulum runs on an Arduino Nano with no internet connection.</li>
+<li>IT will likely need to help install the software for training.</li>
+</ul></div></div></section>
+      <section class="tool-section checklist-section" aria-labelledby="h-getting-started"><h2 id="h-getting-started">Getting started checklist</h2><ul class="checklist">
+<li><input type="checkbox" id="chk-1"> <label for="chk-1">Find the Rotary Inverted Pendulum repository by Ferrolho and read the README.</label></li>
+<li><input type="checkbox" id="chk-2"> <label for="chk-2">Open the in-browser MuJoCo demo to preview the balancing behavior.</label></li>
+<li><input type="checkbox" id="chk-3"> <label for="chk-3">Order the parts on the bill of materials and arrange access to a 3D printer.</label></li>
+<li><input type="checkbox" id="chk-4"> <label for="chk-4">Print the parts and wire the electronics using the wiring guide.</label></li>
+<li><input type="checkbox" id="chk-5"> <label for="chk-5">Follow the first power-on guide before running any motor.</label></li>
+<li><input type="checkbox" id="chk-6"> <label for="chk-6">Ask IT to approve a Python install on a computer for training.</label></li>
+<li><input type="checkbox" id="chk-7"> <label for="chk-7">Follow the training guide only to retrain the policy.</label></li>
+</ul></section>
+      <section class="tool-section " aria-labelledby="h-where-is-the-ai"><h2 id="h-where-is-the-ai">Where is the AI in this product?</h2><p>The AI is a reinforcement learning policy that controls the motor. It is trained in a MuJoCo simulation with the SAC method, fine-tuned on the real rig, and then distilled to run on the Arduino Nano. After training, the AI runs on the device itself. Students can retrain the policy and compare how it balances.</p></section>
+      <section class="tool-section " aria-labelledby="h-privacy-and-safety"><h2 id="h-privacy-and-safety">Privacy and safety</h2><p>The project describes no accounts and collects no student data. Training and running the pendulum happen on the computer and the Arduino. Downloading the repository needs the internet once. The repo does not describe safety steps for moving parts. A teacher should check the motor and arm before each class and supervise 3D printer use.</p></section>
+      <section class="tool-section" aria-labelledby="h-ideas"><h2 id="h-ideas">Ideas by subject</h2><p class="muted">Select a subject to see five classroom ideas.</p><div class="subjects"><details class="subject"><summary><svg class="subject-icon" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false"><path d="M12 8a4 4 0 1 0 0 8 4 4 0 0 0 0-8zM12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M5 19l2-2M17 7l2-2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>How this can be used for Engineering and Design</span></summary><div class="subject-body"><ol>
+<li>Print the pendulum parts and assemble the arm following the build guide.</li>
+<li>Wire the motor and sensors and test the first power-on with a teacher.</li>
+<li>Tune the mounting so the pendulum swings freely and compare balance times.</li>
+<li>Draw a diagram of how the sensor, the Arduino, and the motor work together.</li>
+<li>Measure how long the pendulum stays upright after a small push.</li>
+</ol></div></details><details class="subject"><summary><svg class="subject-icon" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false"><path d="M8 8l-4 4 4 4M16 8l4 4-4 4M14 5l-4 14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>How this can be used for Computer Science</span></summary><div class="subject-body"><ol>
+<li>Open the MuJoCo demo in a browser and describe what the simulated pendulum does.</li>
+<li>Run the training guide and watch the reward improve over time.</li>
+<li>Compare the simulated policy with the policy fine-tuned on the real rig.</li>
+<li>Read the Arduino firmware and list the steps it repeats in each loop.</li>
+<li>Explain in a short report why a policy trained in simulation needs fine-tuning on real hardware.</li>
+</ol></div></details></div></section>
+      <section class="tool-section" aria-labelledby="h-related"><h2 id="h-related">Related products</h2><ul class="related"><li><a href="f1tenth.html">F1TENTH</a><span class="muted"> Shared: Computer Science, Engineering and Design, AI, Robotics.</span></li><li><a href="lekiwi-mobile-manipulator.html">LeKiwi mobile manipulator</a><span class="muted"> Shared: Computer Science, Engineering and Design, AI, Robotics.</span></li><li><a href="so-arm100-so-101-robot-arm.html">SO-ARM100 / SO-101 robot arm</a><span class="muted"> Shared: Computer Science, Engineering and Design, AI, Robotics.</span></li><li><a href="carnegie-mellon-robotics-academy-nvidia-jetson-nano-curricul.html">Carnegie Mellon Robotics Academy NVIDIA Jetson Nano curriculum and JetBot AI training</a><span class="muted"> Shared: Computer Science, Engineering and Design, AI, Robotics.</span></li><li><a href="make-a-robot-kit-ibots.html">Make A Robot Kit (iBots)</a><span class="muted"> Shared: Computer Science, Engineering and Design, AI, Robotics.</span></li><li><a href="robolink-zumi.html">Robolink Zumi</a><span class="muted"> Shared: Computer Science, Engineering and Design, AI, Robotics.</span></li></ul></section>
+    </div>
+    <aside class="tool-side" aria-label="Quick facts">
+      <h2>Quick facts</h2>
+      <table class="facts"><tbody><tr><th scope="row">Made by</th><td>Henrique Ferrolho</td></tr><tr><th scope="row">Type</th><td>Kit</td></tr><tr><th scope="row">Cost</th><td>Unknown<br><span class="muted">The repo says about 20 GBP in parts. Dollar price not stated.</span></td></tr><tr><th scope="row">Grades</th><td>Grades 9-12</td></tr><tr><th scope="row">AI features</th><td>Train your own model</td></tr><tr><th scope="row">Works on</th><td>Windows, Mac, Linux</td></tr><tr><th scope="row">Student data</th><td><span class="badge priv-green">Stays on the device</span></td></tr><tr><th scope="row">Internet</th><td>Only for setup</td></tr><tr><th scope="row">Youngest users</th><td>No age limit found</td></tr><tr><th scope="row">Ease for students*</th><td>Advanced</td></tr><tr><th scope="row">Teacher learning curve*</th><td>Advanced</td></tr><tr><th scope="row">Setup time*</th><td>A day or more</td></tr><tr><th scope="row">IT help*</th><td>IT installs it</td></tr><tr><th scope="row">Open source</th><td>code | hardware</td></tr><tr><th scope="row">Updates</th><td>Actively updated</td></tr><tr><th scope="row">Classroom evidence</th><td>Vendor examples only</td></tr></tbody></table>
+      <h2>More information</h2><ul class='links'><li><a href="https://github.com/ferrolho/rotary-inverted-pendulum" rel="noopener noreferrer">Official site</a></li><li><a href="https://github.com/stephane-caron/awesome-open-source-robots" rel="noopener noreferrer">Awesome open source robots list</a></li></ul>
+      <details class="sources"><summary>Sources used for this page</summary><ul><li><a href="https://github.com/ferrolho/rotary-inverted-pendulum" rel="noopener noreferrer">github.com/ferrolho/rotary-inverted-pendulum</a> <span class="muted">checked 2026-11-19</span></li><li><a href="https://github.com/stephane-caron/awesome-open-source-robots" rel="noopener noreferrer">github.com/stephane-caron/awesome-open-source-robots</a> <span class="muted">checked 2026-11-19</span></li></ul></details>
+      <p class="muted small">* Our estimate from a scoring rubric, based on the research notes. Your experience may differ.</p>
+      <p class="muted small">Classified on 2026-11-19. Details can change. Check with the provider.</p>
+    </aside>
+  </div>
+</div>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <p>An AI-assisted experiment by Jeremy Riel, PhD, UIC TRAILblazer Lab. Some content was written with generative AI and may contain errors. Check details with each provider before use.</p>
+    <p><a href="../about.html">About this project</a> · <a href="../why.html">Why Use Free AI?</a></p>
+  </div>
+</footer>
+</body>
+</html>

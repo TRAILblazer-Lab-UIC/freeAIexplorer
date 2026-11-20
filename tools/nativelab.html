@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'; connect-src 'self'">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<title>NativeLab | Free AI Explorer</title>
+<meta name="description" content="A local desktop app for running language models with chat, a pipeline builder, and a CLI.">
+<link rel="stylesheet" href="../assets/css/site.css?v=5082ebcb03">
+<link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
+<script src="../assets/js/common.js?v=5082ebcb03" defer></script><script src="../assets/js/tool.js?v=5082ebcb03" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="../index.html"><svg class="brand-icon" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false"><path d="M9 4h6v3H9zM6 7h12v11H6zM9 11h.01M15 11h.01M9 15h6M12 2v2M3 11v3M21 11v3" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Free AI Explorer</span></a>
+    <nav aria-label="Main"><ul class="nav"><li><a href="../index.html">Explore</a></li><li><a href="../why.html">Why Use Free AI?</a></li><li><a href="../mylist.html">My List <span class="count" data-list-count></span></a></li><li><a href="../about.html">About</a></li></ul></nav>
+  </div>
+</header>
+<main id="main" tabindex="-1">
+
+<div class="wrap tool">
+  <p class="crumbs"><a href="../index.html">Explore</a> <span aria-hidden="true">›</span> <span>NativeLab</span></p>
+  <div class="tool-head">
+    <div class="tool-figure placeholder" aria-hidden="true"><svg class="big-icon" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false"><path d="M4 5h16v14H4zM4 9h16M8 13l2 2-2 2M12 17h4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+    <div class="tool-title">
+      <h1>NativeLab</h1>
+      <p class="tagline">A local desktop app for running language models with chat, a pipeline builder, and a CLI.</p>
+      <div class="chips"><span class="chip"><svg class="chip-icon" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false"><path d="M9 4h6v3H9zM6 7h12v11H6zM9 11h.01M15 11h.01M9 15h6M12 2v2M3 11v3M21 11v3" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>AI</span></div>
+      <div class="actions"><button type="button" class="star-btn" data-star="nativelab" data-name="NativeLab" aria-pressed="false"><svg class="star-icon" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false"><path d="M12 3l2.8 5.7 6.2.9-4.5 4.4 1 6.2L12 17.3 6.5 20.2l1-6.2L3 9.6l6.2-.9z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="star-label">Add to My List</span></button></div>
+      
+      
+    </div>
+  </div>
+  
+  <div class="tool-grid">
+    <div class="tool-main">
+      <section class="tool-section " aria-labelledby="h-overview"><h2 id="h-overview">Overview</h2><p>NativeLab is a local-first desktop app for running large language models on your own hardware. It has a graphical interface and a terminal command line. It runs local GGUF models through llama.cpp or connects to Ollama. It also has a visual pipeline builder. The project is young and community-run, and the research found no education-specific material.</p></section>
+      <section class="tool-section" aria-labelledby="h-benefits"><h2 id="h-benefits">Benefits</h2><div class="benefits"><div class="benefit"><h3>For students</h3><ul>
+<li>Advanced students can chat with a model that runs on their own computer.</li>
+<li>Students can build a pipeline with a visual builder that has more than 20 node types.</li>
+<li>Students can explore how a local model server works.</li>
+</ul></div><div class="benefit"><h3>For teachers</h3><ul>
+<li>The app offers document question answering over local files.</li>
+<li>A teacher can start a local model server for a class project.</li>
+<li>It suits a teacher or advanced student who is comfortable with Python.</li>
+</ul></div><div class="benefit"><h3>For schools</h3><ul>
+<li>The app is free and the code is open source.</li>
+<li>Model downloads are large, and the computer needs enough RAM or GPU.</li>
+<li>IT must help install Python 3.10 or newer, and Chromebook support is not documented.</li>
+</ul></div></div></section>
+      <section class="tool-section checklist-section" aria-labelledby="h-getting-started"><h2 id="h-getting-started">Getting started checklist</h2><ul class="checklist">
+<li><input type="checkbox" id="chk-1"> <label for="chk-1">Find the NativeLab project page and read the install notes.</label></li>
+<li><input type="checkbox" id="chk-2"> <label for="chk-2">Ask IT to approve Python 3.10 or newer on a test machine.</label></li>
+<li><input type="checkbox" id="chk-3"> <label for="chk-3">Run pip install nativelab.</label></li>
+<li><input type="checkbox" id="chk-4"> <label for="chk-4">Launch nativelab and open the Download tab.</label></li>
+<li><input type="checkbox" id="chk-5"> <label for="chk-5">Download llama.cpp and a small GGUF model while online.</label></li>
+<li><input type="checkbox" id="chk-6"> <label for="chk-6">Go offline and test a short chat.</label></li>
+<li><input type="checkbox" id="chk-7"> <label for="chk-7">Leave the optional remote connectors, Discord, and WhatsApp turned off.</label></li>
+</ul></section>
+      <section class="tool-section " aria-labelledby="h-where-is-the-ai"><h2 id="h-where-is-the-ai">Where is the AI in this product?</h2><p>The AI is a language model that answers chat prompts and questions about documents. It runs on the local computer through llama.cpp or Ollama. Students chat, chain steps in the pipeline builder, and compare how different models answer.</p></section>
+      <section class="tool-section " aria-labelledby="h-privacy-and-safety"><h2 id="h-privacy-and-safety">Privacy and safety</h2><p>No account is needed, and the internet is used for setup and for model and tool downloads from outside sources. Chats stay on the device when a local model is used. The app can connect to remote API endpoints, which would send prompts to those providers. The local server can bind to every network address and expose it to the local network. The README does not mention telemetry. A teacher should keep remote connections off and ask IT to check the server setting.</p></section>
+      <section class="tool-section" aria-labelledby="h-ideas"><h2 id="h-ideas">Ideas by subject</h2><p class="muted">Select a subject to see five classroom ideas.</p><div class="subjects"><details class="subject"><summary><svg class="subject-icon" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false"><path d="M8 8l-4 4 4 4M16 8l4 4-4 4M14 5l-4 14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>How this can be used for Computer Science</span></summary><div class="subject-body"><ol>
+<li>Download a small model and record how much memory it uses.</li>
+<li>Ask the same question of two models and compare the answers.</li>
+<li>Build a two-step pipeline that summarizes text and then lists key words.</li>
+<li>Use the command line to start the model and explain each step.</li>
+<li>Write a report on what a local model can and cannot do on school hardware.</li>
+</ol></div></details></div></section>
+      <section class="tool-section" aria-labelledby="h-related"><h2 id="h-related">Related products</h2><ul class="related"><li><a href="llama-cpp.html">llama.cpp</a><span class="muted"> Often used together. Shared: Computer Science, AI, Grades 9-12.</span></li><li><a href="ollama.html">Ollama</a><span class="muted"> Often used together. Shared: Computer Science, AI, Grades 9-12.</span></li><li><a href="hugging-face-chat-ui.html">Hugging Face chat-ui</a><span class="muted"> Shared: Computer Science, AI, Grades 9-12.</span></li><li><a href="koboldcpp.html">KoboldCpp</a><span class="muted"> Shared: Computer Science, AI, Grades 9-12.</span></li><li><a href="chatbox.html">Chatbox</a><span class="muted"> Shared: Computer Science, AI, Grades 9-12.</span></li><li><a href="text-generation-webui.html">text-generation-webui</a><span class="muted"> Shared: Computer Science, AI, Grades 9-12.</span></li></ul></section>
+    </div>
+    <aside class="tool-side" aria-label="Quick facts">
+      <h2>Quick facts</h2>
+      <table class="facts"><tbody><tr><th scope="row">Made by</th><td>7zone Systems</td></tr><tr><th scope="row">Type</th><td>Software</td></tr><tr><th scope="row">Cost</th><td>Free<br><span class="muted">Free and open source. Model downloads are large.</span></td></tr><tr><th scope="row">Grades</th><td>Grades 9-12</td></tr><tr><th scope="row">AI features</th><td>Writes and chats, Sees and recognizes</td></tr><tr><th scope="row">Works on</th><td>Windows, Mac, Linux, Android</td></tr><tr><th scope="row">Student data</th><td><span class="badge priv-green">Stays on the device</span></td></tr><tr><th scope="row">Internet</th><td>Only for setup</td></tr><tr><th scope="row">Youngest users</th><td>No age limit found</td></tr><tr><th scope="row">Ease for students*</th><td>Moderate</td></tr><tr><th scope="row">Teacher learning curve*</th><td>Advanced</td></tr><tr><th scope="row">Setup time*</th><td>A day or more</td></tr><tr><th scope="row">IT help*</th><td>IT installs it</td></tr><tr><th scope="row">Open source</th><td>Open-source software</td></tr><tr><th scope="row">Updates</th><td>Actively updated</td></tr><tr><th scope="row">Classroom evidence</th><td>Undocumented</td></tr></tbody></table>
+      <h2>More information</h2><ul class='links'><li><a href="https://7zonesystems.github.io/NativeLab/" rel="noopener noreferrer">Official site</a></li><li><a href="https://github.com/7zonesystems/NativeLab" rel="noopener noreferrer">GitHub repository</a></li></ul>
+      <details class="sources"><summary>Sources used for this page</summary><ul><li><a href="https://7zonesystems.github.io/NativeLab/" rel="noopener noreferrer">7zonesystems.github.io/NativeLab/</a> <span class="muted">checked 2026-11-19</span></li><li><a href="https://github.com/7zonesystems/NativeLab" rel="noopener noreferrer">github.com/7zonesystems/NativeLab</a> <span class="muted">checked 2026-11-19</span></li></ul></details>
+      <p class="muted small">* Our estimate from a scoring rubric, based on the research notes. Your experience may differ.</p>
+      <p class="muted small">Classified on 2026-11-19. Details can change. Check with the provider.</p>
+    </aside>
+  </div>
+</div>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <p>An AI-assisted experiment by Jeremy Riel, PhD, UIC TRAILblazer Lab. Some content was written with generative AI and may contain errors. Check details with each provider before use.</p>
+    <p><a href="../about.html">About this project</a> · <a href="../why.html">Why Use Free AI?</a></p>
+  </div>
+</footer>
+</body>
+</html>

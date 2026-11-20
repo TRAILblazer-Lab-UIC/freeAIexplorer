@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'; connect-src 'self'">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<title>Free AI Explorer: Explore free and local AI tools for schools</title>
+<meta name="description" content="Find free, local, and privacy-friendly AI, computing, and robotics tools for K-12 classrooms.">
+<link rel="stylesheet" href="assets/css/site.css?v=5082ebcb03">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<script src="assets/js/common.js?v=5082ebcb03" defer></script><script src="assets/js/explorer.js?v=5082ebcb03" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="index.html"><svg class="brand-icon" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false"><path d="M9 4h6v3H9zM6 7h12v11H6zM9 11h.01M15 11h.01M9 15h6M12 2v2M3 11v3M21 11v3" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Free AI Explorer</span></a>
+    <nav aria-label="Main"><ul class="nav"><li><a href="index.html" aria-current="page">Explore</a></li><li><a href="why.html">Why Use Free AI?</a></li><li><a href="mylist.html">My List <span class="count" data-list-count></span></a></li><li><a href="about.html">About</a></li></ul></nav>
+  </div>
+</header>
+<main id="main" tabindex="-1">
+<section class="hero">
+  <div class="wrap">
+    <h1>Find free AI tools that keep student data safe</h1>
+    <p class="lead">Browse 1641 tools, lessons, and activities for computing, AI, and robotics. Many run on your own devices. Student work stays in your school.</p>
+    <button type="button" id="beginner-toggle" class="beginner-btn" aria-pressed="false">
+      <span class="beginner-title">For AI Beginners</span>
+      <span class="beginner-sub">Show easy tools where students can see AI at work</span>
+    </button>
+  </div>
+</section>
+
+<div class="wrap explorer">
+  <div class="search-row">
+    <label for="q" class="search-label">Search tools</label>
+    <input type="search" id="q" name="q" autocomplete="off" placeholder="Try robots, poetry, or speech">
+  </div>
+
+  <details class="needs" id="needs">
+    <summary>I'm looking for something specific</summary>
+    <p class="muted">Pick what fits your class. The best matches rise to the top of the list.</p>
+    <div class="needs-grid">
+      <label>Grade
+        <select data-need="grade">
+          <option value="">Any grade</option><option value="k2">Grades K-2</option><option value="g35">Grades 3-5</option>
+          <option value="g68">Grades 6-8</option><option value="g912">Grades 9-12</option>
+        </select>
+      </label>
+      <label>Subject
+        <select data-need="subject" id="need-subject"><option value="">Any subject</option></select>
+      </label>
+      <label>Devices we have
+        <select data-need="device">
+          <option value="">Any devices</option><option value="chromebook">Chromebooks</option><option value="ipad">iPads</option>
+          <option value="windows">Windows computers</option><option value="mac">Macs</option><option value="paper">No devices, paper only</option>
+        </select>
+      </label>
+      <label>Internet in class
+        <select data-need="internet">
+          <option value="">Reliable internet</option><option value="limited">Limited or none</option>
+        </select>
+      </label>
+      <label>Budget
+        <select data-need="budget">
+          <option value="">Any budget</option><option value="free">Free only</option><option value="low">Up to $50 per unit</option>
+        </select>
+      </label>
+      <label>Privacy needs
+        <select data-need="privacy">
+          <option value="">Keep data local when possible</option><option value="strict">Student data must stay in school</option>
+        </select>
+      </label>
+      <label>My comfort with tech
+        <select data-need="comfort">
+          <option value="">Some experience</option><option value="new">I am new to this</option><option value="confident">Very confident</option>
+        </select>
+      </label>
+    </div>
+  </details>
+
+  <div class="explorer-grid">
+    <aside class="filters" aria-label="Filters">
+      <div class="filters-head">
+        <h2>Filters</h2>
+        <button type="button" id="clear-filters" class="link-btn">Clear all</button>
+      </div>
+      <div class="switch-row">
+        <input type="checkbox" id="local-only" checked>
+        <label for="local-only">Hide tools that send student data to a company</label>
+      </div>
+      <div class="switch-row">
+        <input type="checkbox" id="hide-unverified">
+        <label for="hide-unverified">Hide tools with unverified privacy</label>
+      </div>
+      <div id="facets"></div>
+    </aside>
+
+    <section class="results" aria-labelledby="results-heading">
+      <div class="results-head">
+        <h2 id="results-heading" class="visually-hidden">Results</h2>
+        <p id="result-count" role="status" aria-live="polite" aria-atomic="true">Loading tools</p>
+        <label class="sort">Sort by
+          <select id="sort">
+            <option value="match">Best match</option>
+            <option value="pop">Most popular</option>
+            <option value="az">Name, A to Z</option>
+          </select>
+        </label>
+      </div>
+      <p id="filter-note" class="notice" hidden></p>
+      <ul id="cards" class="cards"></ul>
+      <div class="more-row"><button type="button" id="more" class="btn" hidden>Show more tools</button></div>
+      <noscript><p class="notice">The explorer needs JavaScript. Every tool also has its own page. Browse the full list on the <a href="data/products.json">data file</a>.</p></noscript>
+    </section>
+  </div>
+</div>
+
+<template id="card-tpl">
+  <li class="card">
+    <div class="card-img" aria-hidden="true"></div>
+    <div class="card-body">
+      <h3 class="card-title"><a></a></h3>
+      <p class="card-tagline"></p>
+      <p class="card-badges"></p>
+    </div>
+    <button type="button" class="star-btn small" aria-pressed="false"><span class="star-label visually-hidden">Add to My List</span></button>
+  </li>
+</template>
+
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <p>An AI-assisted experiment by Jeremy Riel, PhD, UIC TRAILblazer Lab. Some content was written with generative AI and may contain errors. Check details with each provider before use.</p>
+    <p><a href="about.html">About this project</a> · <a href="why.html">Why Use Free AI?</a></p>
+  </div>
+</footer>
+</body>
+</html>

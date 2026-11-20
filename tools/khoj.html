@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'; connect-src 'self'">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<title>Khoj | Free AI Explorer</title>
+<meta name="description" content="A self-hosted personal AI that answers from the web and your own documents.">
+<link rel="stylesheet" href="../assets/css/site.css?v=5082ebcb03">
+<link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
+<script src="../assets/js/common.js?v=5082ebcb03" defer></script><script src="../assets/js/tool.js?v=5082ebcb03" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="../index.html"><svg class="brand-icon" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false"><path d="M9 4h6v3H9zM6 7h12v11H6zM9 11h.01M15 11h.01M9 15h6M12 2v2M3 11v3M21 11v3" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Free AI Explorer</span></a>
+    <nav aria-label="Main"><ul class="nav"><li><a href="../index.html">Explore</a></li><li><a href="../why.html">Why Use Free AI?</a></li><li><a href="../mylist.html">My List <span class="count" data-list-count></span></a></li><li><a href="../about.html">About</a></li></ul></nav>
+  </div>
+</header>
+<main id="main" tabindex="-1">
+
+<div class="wrap tool">
+  <p class="crumbs"><a href="../index.html">Explore</a> <span aria-hidden="true">›</span> <span>Khoj</span></p>
+  <div class="tool-head">
+    <div class="tool-figure placeholder" aria-hidden="true"><svg class="big-icon" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false"><path d="M3 5h18v6H3zM3 13h18v6H3zM7 8h.01M7 16h.01" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+    <div class="tool-title">
+      <h1>Khoj</h1>
+      <p class="tagline">A self-hosted personal AI that answers from the web and your own documents.</p>
+      <div class="chips"><span class="chip"><svg class="chip-icon" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false"><path d="M9 4h6v3H9zM6 7h12v11H6zM9 11h.01M15 11h.01M9 15h6M12 2v2M3 11v3M21 11v3" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>AI</span></div>
+      <div class="actions"><button type="button" class="star-btn" data-star="khoj" data-name="Khoj" aria-pressed="false"><svg class="star-icon" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false"><path d="M12 3l2.8 5.7 6.2.9-4.5 4.4 1 6.2L12 17.3 6.5 20.2l1-6.2L3 9.6l6.2-.9z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="star-label">Add to My List</span></button></div>
+      
+      
+    </div>
+  </div>
+  
+  <div class="tool-grid">
+    <div class="tool-main">
+      <section class="tool-section " aria-labelledby="h-overview"><h2 id="h-overview">Overview</h2><p>Khoj is a personal AI app that answers questions from the web and from the user's own documents. It supports chat with local or online models, custom agents, scheduled research automations, and semantic search over files. It can be self hosted with Docker or pip and can point at a local Ollama server. A hosted version exists at app.khoj.dev.</p></section>
+      <section class="tool-section" aria-labelledby="h-benefits"><h2 id="h-benefits">Benefits</h2><div class="benefits"><div class="benefit"><h3>For students</h3><ul>
+<li>Advanced students can ask questions about their own notes.</li>
+<li>Students can build custom agents.</li>
+<li>Students can reach it from a browser, Obsidian, Emacs, desktop, phone, or WhatsApp.</li>
+</ul></div><div class="benefit"><h3>For teachers</h3><ul>
+<li>Teachers can search class notes by meaning.</li>
+<li>Scheduled research automations can collect updates on a topic.</li>
+<li>The tool is best for teachers who are comfortable with servers.</li>
+</ul></div><div class="benefit"><h3>For schools</h3><ul>
+<li>The software is free when self hosted. Hosted pricing was not found.</li>
+<li>Offline chat needs at least 8 GB RAM and 5 GB free disk, and the docs recommend 16 GB VRAM.</li>
+<li>It needs a server admin to set up.</li>
+</ul></div></div></section>
+      <section class="tool-section checklist-section" aria-labelledby="h-getting-started"><h2 id="h-getting-started">Getting started checklist</h2><ul class="checklist">
+<li><input type="checkbox" id="chk-1"> <label for="chk-1">Find Khoj on its official site and read the setup docs.</label></li>
+<li><input type="checkbox" id="chk-2"> <label for="chk-2">Ask IT for a server admin to help.</label></li>
+<li><input type="checkbox" id="chk-3"> <label for="chk-3">Run Docker Compose, or run pip install khoj with the local extra.</label></li>
+<li><input type="checkbox" id="chk-4"> <label for="chk-4">Create an admin account.</label></li>
+<li><input type="checkbox" id="chk-5"> <label for="chk-5">Register a local Ollama endpoint in the admin panel.</label></li>
+<li><input type="checkbox" id="chk-6"> <label for="chk-6">Choose that endpoint as the chat model.</label></li>
+<li><input type="checkbox" id="chk-7"> <label for="chk-7">Test with a small folder of class notes while offline.</label></li>
+<li><input type="checkbox" id="chk-8"> <label for="chk-8">Skip the hosted version for student data.</label></li>
+</ul></section>
+      <section class="tool-section " aria-labelledby="h-where-is-the-ai"><h2 id="h-where-is-the-ai">Where is the AI in this product?</h2><p>The AI is a chat assistant with semantic search over documents and some image generation. It runs on a school server or a desktop with a local model, and it can also use online models. Students ask questions and check the answers against their own files. Anonymous mode is described as suitable for single user local setups.</p></section>
+      <section class="tool-section " aria-labelledby="h-privacy-and-safety"><h2 id="h-privacy-and-safety">Privacy and safety</h2><p>Accounts are optional, and the internet is used for setup of a local install. Self hosting with a local model keeps data on the school's own machine. Commercial chat models need API keys and send prompts to those providers. The hosted app at app.khoj.dev is a separate service that sends data to the vendor. The setup docs read do not cover telemetry. A teacher should confirm with IT which models and hosts are in use.</p></section>
+      <section class="tool-section" aria-labelledby="h-ideas"><h2 id="h-ideas">Ideas by subject</h2><p class="muted">Select a subject to see five classroom ideas.</p><div class="subjects"><details class="subject"><summary><svg class="subject-icon" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false"><path d="M8 8l-4 4 4 4M16 8l4 4-4 4M14 5l-4 14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>How this can be used for Computer Science</span></summary><div class="subject-body"><ol>
+<li>Add a folder of notes and ask Khoj a question about them.</li>
+<li>Compare an answer from a local model with one from an online model.</li>
+<li>Build a custom agent for one narrow task and test it.</li>
+<li>Explain how semantic search finds a note by meaning.</li>
+<li>Write a plan for how a school could run Khoj safely.</li>
+</ol></div></details></div></section>
+      <section class="tool-section" aria-labelledby="h-related"><h2 id="h-related">Related products</h2><ul class="related"><li><a href="ollama.html">Ollama</a><span class="muted"> Often used together. Shared: Computer Science, AI, Grades 9-12.</span></li><li><a href="big-agi.html">Big-AGI</a><span class="muted"> Shared: Computer Science, AI, Grades 9-12.</span></li><li><a href="librechat.html">LibreChat</a><span class="muted"> Shared: Computer Science, AI, Grades 9-12.</span></li><li><a href="cherry-studio.html">Cherry Studio</a><span class="muted"> Shared: Computer Science, AI, Grades 9-12.</span></li><li><a href="ibl-ai-self-hosted-k-12-platform.html">ibl.ai self-hosted K-12 platform</a><span class="muted"> Shared: Computer Science, AI, Grades 9-12.</span></li><li><a href="text-generation-webui.html">text-generation-webui</a><span class="muted"> Shared: Computer Science, AI, Grades 9-12.</span></li></ul></section>
+    </div>
+    <aside class="tool-side" aria-label="Quick facts">
+      <h2>Quick facts</h2>
+      <table class="facts"><tbody><tr><th scope="row">Made by</th><td>Khoj</td></tr><tr><th scope="row">Type</th><td>School platform</td></tr><tr><th scope="row">Cost</th><td>Free<br><span class="muted">Free when self hosted. Hosted pricing was not found.</span></td></tr><tr><th scope="row">Grades</th><td>Grades 9-12</td></tr><tr><th scope="row">AI features</th><td>Writes and chats, Makes images</td></tr><tr><th scope="row">Works on</th><td>Windows, Mac, Linux, Web browser</td></tr><tr><th scope="row">Student data</th><td><span class="badge priv-yellow">Local with optional cloud or accounts</span></td></tr><tr><th scope="row">Internet</th><td>Only for setup</td></tr><tr><th scope="row">Youngest users</th><td>Unknown</td></tr><tr><th scope="row">Ease for students*</th><td>Easy</td></tr><tr><th scope="row">Teacher learning curve*</th><td>Advanced</td></tr><tr><th scope="row">Setup time*</th><td>A day or more</td></tr><tr><th scope="row">IT help*</th><td>Needs a server admin</td></tr><tr><th scope="row">Open source</th><td>Open-source software</td></tr><tr><th scope="row">Updates</th><td>Updated slowly</td></tr><tr><th scope="row">Classroom evidence</th><td>Undocumented</td></tr></tbody></table>
+      <h2>More information</h2><ul class='links'><li><a href="https://khoj.dev" rel="noopener noreferrer">Official site</a></li><li><a href="https://docs.khoj.dev/get-started/setup" rel="noopener noreferrer">Self-host setup</a></li><li><a href="https://github.com/khoj-ai/khoj" rel="noopener noreferrer">GitHub</a></li></ul>
+      <details class="sources"><summary>Sources used for this page</summary><ul><li><a href="https://khoj.dev" rel="noopener noreferrer">khoj.dev</a> <span class="muted">checked 2026-11-19</span></li><li><a href="https://docs.khoj.dev/get-started/setup" rel="noopener noreferrer">docs.khoj.dev/get-started/setup</a> <span class="muted">checked 2026-11-19</span></li><li><a href="https://github.com/khoj-ai/khoj" rel="noopener noreferrer">github.com/khoj-ai/khoj</a> <span class="muted">checked 2026-11-19</span></li></ul></details>
+      <p class="muted small">* Our estimate from a scoring rubric, based on the research notes. Your experience may differ.</p>
+      <p class="muted small">Classified on 2026-11-19. Details can change. Check with the provider.</p>
+    </aside>
+  </div>
+</div>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <p>An AI-assisted experiment by Jeremy Riel, PhD, UIC TRAILblazer Lab. Some content was written with generative AI and may contain errors. Check details with each provider before use.</p>
+    <p><a href="../about.html">About this project</a> · <a href="../why.html">Why Use Free AI?</a></p>
+  </div>
+</footer>
+</body>
+</html>

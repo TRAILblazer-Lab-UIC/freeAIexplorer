@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'; connect-src 'self'">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<title>llm-for-zotero | Free AI Explorer</title>
+<meta name="description" content="A Zotero plugin that adds an AI chat panel to the PDF reader.">
+<link rel="stylesheet" href="../assets/css/site.css?v=5082ebcb03">
+<link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
+<script src="../assets/js/common.js?v=5082ebcb03" defer></script><script src="../assets/js/tool.js?v=5082ebcb03" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="../index.html"><svg class="brand-icon" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false"><path d="M9 4h6v3H9zM6 7h12v11H6zM9 11h.01M15 11h.01M9 15h6M12 2v2M3 11v3M21 11v3" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Free AI Explorer</span></a>
+    <nav aria-label="Main"><ul class="nav"><li><a href="../index.html">Explore</a></li><li><a href="../why.html">Why Use Free AI?</a></li><li><a href="../mylist.html">My List <span class="count" data-list-count></span></a></li><li><a href="../about.html">About</a></li></ul></nav>
+  </div>
+</header>
+<main id="main" tabindex="-1">
+
+<div class="wrap tool">
+  <p class="crumbs"><a href="../index.html">Explore</a> <span aria-hidden="true">›</span> <span>llm-for-zotero</span></p>
+  <div class="tool-head">
+    <div class="tool-figure placeholder" aria-hidden="true"><svg class="big-icon" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false"><path d="M4 5h16v14H4zM4 9h16M8 13l2 2-2 2M12 17h4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+    <div class="tool-title">
+      <h1>llm-for-zotero</h1>
+      <p class="tagline">A Zotero plugin that adds an AI chat panel to the PDF reader.</p>
+      <div class="chips"><span class="chip"><svg class="chip-icon" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false"><path d="M9 4h6v3H9zM6 7h12v11H6zM9 11h.01M15 11h.01M9 15h6M12 2v2M3 11v3M21 11v3" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>AI</span></div>
+      <div class="actions"><button type="button" class="star-btn" data-star="llm-for-zotero" data-name="llm-for-zotero" aria-pressed="false"><svg class="star-icon" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false"><path d="M12 3l2.8 5.7 6.2.9-4.5 4.4 1 6.2L12 17.3 6.5 20.2l1-6.2L3 9.6l6.2-.9z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="star-label">Add to My List</span></button></div>
+      
+      
+    </div>
+  </div>
+  
+  <div class="tool-grid">
+    <div class="tool-main">
+      <section class="tool-section " aria-labelledby="h-overview"><h2 id="h-overview">Overview</h2><p>llm-for-zotero is an open source plugin for the Zotero reference manager. It adds a chat panel beside the PDF reader. Users ask questions about a paper, summarize it, inspect figures, compare papers, and save notes. It suits high school students doing research and the teachers who guide them.</p></section>
+      <section class="tool-section" aria-labelledby="h-benefits"><h2 id="h-benefits">Benefits</h2><div class="benefits"><div class="benefit"><h3>For students</h3><ul>
+<li>Students can ask a paper direct questions and see answers with citations.</li>
+<li>Students can compare several papers in one chat.</li>
+<li>Students can save notes to Zotero or to Markdown folders.</li>
+</ul></div><div class="benefit"><h3>For teachers</h3><ul>
+<li>Teachers can show how to read a hard paper in stages.</li>
+<li>The plugin works inside a tool that research classes may already use.</li>
+<li>Providers can be cloud services or a local model.</li>
+</ul></div><div class="benefit"><h3>For schools</h3><ul>
+<li>The plugin is free. API use is billed by the provider.</li>
+<li>A local model keeps confidential files on the device but needs a reasonably powerful computer.</li>
+<li>IT will likely need to install the plugin.</li>
+</ul></div></div></section>
+      <section class="tool-section checklist-section" aria-labelledby="h-getting-started"><h2 id="h-getting-started">Getting started checklist</h2><ul class="checklist">
+<li><input type="checkbox" id="chk-1"> <label for="chk-1">Install Zotero on one test computer.</label></li>
+<li><input type="checkbox" id="chk-2"> <label for="chk-2">Download the .xpi file from the plugin's Releases page.</label></li>
+<li><input type="checkbox" id="chk-3"> <label for="chk-3">Ask IT to approve the plugin.</label></li>
+<li><input type="checkbox" id="chk-4"> <label for="chk-4">In Zotero, open Tools, then Add-ons, and install the .xpi file.</label></li>
+<li><input type="checkbox" id="chk-5"> <label for="chk-5">Choose a provider, either a cloud API or a local OpenAI-compatible endpoint.</label></li>
+<li><input type="checkbox" id="chk-6"> <label for="chk-6">Test the connection with a public paper.</label></li>
+<li><input type="checkbox" id="chk-7"> <label for="chk-7">Choose a local model for any confidential files.</label></li>
+<li><input type="checkbox" id="chk-8"> <label for="chk-8">Leave Agent Mode off until a teacher has tested it.</label></li>
+</ul></section>
+      <section class="tool-section " aria-labelledby="h-where-is-the-ai"><h2 id="h-where-is-the-ai">Where is the AI in this product?</h2><p>The AI is a language model that answers questions about the open PDF. The model can run in a cloud provider or on a local endpoint. The plugin runs inside the Zotero desktop app. Students ask questions, check the cited passages, and write their own notes.</p></section>
+      <section class="tool-section " aria-labelledby="h-privacy-and-safety"><h2 id="h-privacy-and-safety">Privacy and safety</h2><p>No account is needed for the plugin, but a cloud provider may need one. Conversation history and paper context are stored locally. With an API provider, paper content and messages go to that provider. WebChat relays to chatgpt.com or chat.deepseek.com. Tavily web search and cloud MinerU send queries or PDFs to those services. The README says the plugin does not train models and does not mention telemetry. A guide warns that plugins have full access to Zotero data and advises local models for confidential files. A teacher should check which provider is set before students load any papers.</p></section>
+      <section class="tool-section" aria-labelledby="h-ideas"><h2 id="h-ideas">Ideas by subject</h2><p class="muted">Select a subject to see five classroom ideas.</p><div class="subjects"><details class="subject"><summary><svg class="subject-icon" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false"><path d="M5 4h3v16H5zM10 4h3v16h-3zM15 5l3-1 3 15-3 1z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>How this can be used for Library and Media Literacy</span></summary><div class="subject-body"><ol>
+<li>Open a source article and ask the chat to list its main claims, then check each claim in the text.</li>
+<li>Compare two papers on one topic and record where they agree and differ.</li>
+<li>Save a cited note for each source in a small research project.</li>
+<li>Check whether the cited passage really supports the chat's answer.</li>
+<li>Write a short guide on when a chat summary helps and when to read the original.</li>
+</ol></div></details><details class="subject"><summary><svg class="subject-icon" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false"><path d="M4 5h7a3 3 0 0 1 3 3v11a2 2 0 0 0-2-2H4zM20 5h-4a2 2 0 0 0-2 2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>How this can be used for English and Language Arts</span></summary><div class="subject-body"><ol>
+<li>Summarize a reading in your own words, then compare it with the chat summary.</li>
+<li>Ask the chat about a figure in a nonfiction article and describe what it shows.</li>
+<li>Compare two articles on one issue and write a paragraph on their different views.</li>
+<li>Mark where the chat missed an important detail in a reading.</li>
+<li>Build an annotated bibliography from saved notes.</li>
+</ol></div></details></div></section>
+      <section class="tool-section" aria-labelledby="h-related"><h2 id="h-related">Related products</h2><ul class="related"><li><a href="zocrates-zotero-plugin.html">Zocrates (Zotero plugin)</a><span class="muted"> Shared: English and Language Arts, Library and Media Literacy, AI, Grades 9-12.</span></li><li><a href="obsidian-ollama-chat-plugin.html">Obsidian Ollama Chat plugin</a><span class="muted"> Shared: English and Language Arts, Library and Media Literacy, AI, Grades 9-12.</span></li><li><a href="msty.html">Msty</a><span class="muted"> Shared: English and Language Arts, Library and Media Literacy, AI, Grades 9-12.</span></li><li><a href="pdf-tutor-ashut90.html">PDF Tutor (Ashut90)</a><span class="muted"> Shared: English and Language Arts, Library and Media Literacy, AI, Grades 9-12.</span></li><li><a href="obsidian-local-gpt-plugin.html">Obsidian Local GPT plugin</a><span class="muted"> Shared: English and Language Arts, AI, Grades 9-12.</span></li><li><a href="localtutor.html">LocalTutor</a><span class="muted"> Shared: English and Language Arts, Library and Media Literacy, AI, Grades 9-12.</span></li></ul></section>
+    </div>
+    <aside class="tool-side" aria-label="Quick facts">
+      <h2>Quick facts</h2>
+      <table class="facts"><tbody><tr><th scope="row">Made by</th><td>Community developers</td></tr><tr><th scope="row">Type</th><td>Software</td></tr><tr><th scope="row">Cost</th><td>Free<br><span class="muted">Plugin is free. API usage is billed by the provider.</span></td></tr><tr><th scope="row">Grades</th><td>Grades 9-12</td></tr><tr><th scope="row">AI features</th><td>Writes and chats</td></tr><tr><th scope="row">Works on</th><td>Windows, Mac, Linux</td></tr><tr><th scope="row">Student data</th><td><span class="badge priv-yellow">Local with optional cloud or accounts</span></td></tr><tr><th scope="row">Internet</th><td>Only for setup</td></tr><tr><th scope="row">Youngest users</th><td>Unknown</td></tr><tr><th scope="row">Ease for students*</th><td>Easy</td></tr><tr><th scope="row">Teacher learning curve*</th><td>Moderate</td></tr><tr><th scope="row">Setup time*</th><td>About an hour</td></tr><tr><th scope="row">IT help*</th><td>IT installs it</td></tr><tr><th scope="row">Open source</th><td>Open-source software</td></tr><tr><th scope="row">Updates</th><td>Actively updated</td></tr><tr><th scope="row">Classroom evidence</th><td>Undocumented</td></tr></tbody></table>
+      <h2>More information</h2><ul class='links'><li><a href="https://github.com/yilewang/llm-for-zotero" rel="noopener noreferrer">Official site</a></li><li><a href="https://coursiv.io/blog/zotero-ai" rel="noopener noreferrer">Zotero AI plugin guide</a></li></ul>
+      <details class="sources"><summary>Sources used for this page</summary><ul><li><a href="https://github.com/yilewang/llm-for-zotero" rel="noopener noreferrer">github.com/yilewang/llm-for-zotero</a> <span class="muted">checked 2026-11-19</span></li><li><a href="https://coursiv.io/blog/zotero-ai" rel="noopener noreferrer">coursiv.io/blog/zotero-ai</a> <span class="muted">checked 2026-11-19</span></li></ul></details>
+      <p class="muted small">* Our estimate from a scoring rubric, based on the research notes. Your experience may differ.</p>
+      <p class="muted small">Classified on 2026-11-19. Details can change. Check with the provider.</p>
+    </aside>
+  </div>
+</div>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <p>An AI-assisted experiment by Jeremy Riel, PhD, UIC TRAILblazer Lab. Some content was written with generative AI and may contain errors. Check details with each provider before use.</p>
+    <p><a href="../about.html">About this project</a> · <a href="../why.html">Why Use Free AI?</a></p>
+  </div>
+</footer>
+</body>
+</html>

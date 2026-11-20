@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'; connect-src 'self'">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<title>The Littlest JupyterHub | Free AI Explorer</title>
+<meta name="description" content="A small server setup that lets a class use Jupyter notebooks in the browser.">
+<link rel="stylesheet" href="../assets/css/site.css?v=5082ebcb03">
+<link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
+<script src="../assets/js/common.js?v=5082ebcb03" defer></script><script src="../assets/js/tool.js?v=5082ebcb03" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="../index.html"><svg class="brand-icon" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false"><path d="M9 4h6v3H9zM6 7h12v11H6zM9 11h.01M15 11h.01M9 15h6M12 2v2M3 11v3M21 11v3" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Free AI Explorer</span></a>
+    <nav aria-label="Main"><ul class="nav"><li><a href="../index.html">Explore</a></li><li><a href="../why.html">Why Use Free AI?</a></li><li><a href="../mylist.html">My List <span class="count" data-list-count></span></a></li><li><a href="../about.html">About</a></li></ul></nav>
+  </div>
+</header>
+<main id="main" tabindex="-1">
+
+<div class="wrap tool">
+  <p class="crumbs"><a href="../index.html">Explore</a> <span aria-hidden="true">›</span> <span>The Littlest JupyterHub</span></p>
+  <div class="tool-head">
+    <div class="tool-figure placeholder" aria-hidden="true"><svg class="big-icon" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false"><path d="M3 5h18v6H3zM3 13h18v6H3zM7 8h.01M7 16h.01" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+    <div class="tool-title">
+      <h1>The Littlest JupyterHub</h1>
+      <p class="tagline">A small server setup that lets a class use Jupyter notebooks in the browser.</p>
+      <div class="chips"><span class="chip"><svg class="chip-icon" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false"><path d="M4 5h16v10H4zM2 19h20M10 15v4M14 15v4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Computing</span></div>
+      <div class="actions"><button type="button" class="star-btn" data-star="the-littlest-jupyterhub" data-name="The Littlest JupyterHub" aria-pressed="false"><svg class="star-icon" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false"><path d="M12 3l2.8 5.7 6.2.9-4.5 4.4 1 6.2L12 17.3 6.5 20.2l1-6.2L3 9.6l6.2-.9z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="star-label">Add to My List</span></button></div>
+      
+      
+    </div>
+  </div>
+  
+  <div class="tool-grid">
+    <div class="tool-main">
+      <section class="tool-section " aria-labelledby="h-overview"><h2 id="h-overview">Overview</h2><p>The Littlest JupyterHub is a JupyterHub distribution for a small number of users on a single server. It targets 0 to 100 users. An instructor installs it on one virtual machine or physical server. Students log in through a browser and work in Jupyter notebooks hosted on that server.</p></section>
+      <section class="tool-section" aria-labelledby="h-benefits"><h2 id="h-benefits">Benefits</h2><div class="benefits"><div class="benefit"><h3>For students</h3><ul>
+<li>Students need only a browser and a network path to the server.</li>
+<li>Students work in notebooks that run code and show results.</li>
+<li>Students keep their files on the class server.</li>
+</ul></div><div class="benefit"><h3>For teachers</h3><ul>
+<li>Pre-installed packages work with conda and pip.</li>
+<li>Plugins allow customization.</li>
+<li>Berkeley recommends it for classes of 100 or fewer students.</li>
+</ul></div><div class="benefit"><h3>For schools</h3><ul>
+<li>The software is free. A Berkeley guide estimates about 130 to 170 dollars per month of cloud cost for a class of 30 to 50 students.</li>
+<li>It needs a server running a current LTS Debian or Ubuntu with root access.</li>
+<li>A technical person is needed. Berkeley says 20 to 25 concurrent users is realistic on one machine.</li>
+</ul></div></div></section>
+      <section class="tool-section checklist-section" aria-labelledby="h-getting-started"><h2 id="h-getting-started">Getting started checklist</h2><ul class="checklist">
+<li><input type="checkbox" id="chk-1"> <label for="chk-1">Find The Littlest JupyterHub install guide.</label></li>
+<li><input type="checkbox" id="chk-2"> <label for="chk-2">Ask IT to provision a Debian or Ubuntu server with root access.</label></li>
+<li><input type="checkbox" id="chk-3"> <label for="chk-3">Follow the install guide for your cloud provider or own hardware.</label></li>
+<li><input type="checkbox" id="chk-4"> <label for="chk-4">Set up an authenticator. The default is FirstUseAuthenticator, and OAuth and LDAP are also options.</label></li>
+<li><input type="checkbox" id="chk-5"> <label for="chk-5">Turn on HTTPS.</label></li>
+<li><input type="checkbox" id="chk-6"> <label for="chk-6">Add the packages that your class needs.</label></li>
+<li><input type="checkbox" id="chk-7"> <label for="chk-7">Test with a small group before the full class.</label></li>
+<li><input type="checkbox" id="chk-8"> <label for="chk-8">Larger classes should use JupyterHub on Kubernetes.</label></li>
+</ul></section>
+      <section class="tool-section " aria-labelledby="h-where-is-the-ai"><h2 id="h-where-is-the-ai">Where is the AI in this product?</h2><p>The Littlest JupyterHub has no AI. It gives students a place to write and run code on a school server. They build coding and data skills in notebooks.</p></section>
+      <section class="tool-section " aria-labelledby="h-privacy-and-safety"><h2 id="h-privacy-and-safety">Privacy and safety</h2><p>Accounts are required. The server stores usernames, passwords, and notebook files on the server the school or instructor runs. A rented cloud server means the cloud provider hosts the data. The docs say to enable HTTPS before real use. The research inferred that no internet is needed for classroom use, and the requirements page mentions a public IP. Work with IT to set a strong authenticator, turn on HTTPS, and confirm where the server runs.</p></section>
+      <section class="tool-section" aria-labelledby="h-ideas"><h2 id="h-ideas">Ideas by subject</h2><p class="muted">Select a subject to see five classroom ideas.</p><div class="subjects"><details class="subject"><summary><svg class="subject-icon" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false"><path d="M8 8l-4 4 4 4M16 8l4 4-4 4M14 5l-4 14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>How this can be used for Computer Science</span></summary><div class="subject-body"><ol>
+<li>Log in and run a first notebook cell that prints a message.</li>
+<li>Load a small dataset and graph it in a notebook.</li>
+<li>Write a short program and explain each line in a text cell.</li>
+<li>Fix an error message that appears in a notebook.</li>
+<li>Share a finished notebook with the teacher for review.</li>
+</ol></div></details></div></section>
+      <section class="tool-section" aria-labelledby="h-related"><h2 id="h-related">Related products</h2><ul class="related"><li><a href="jupyterhub.html">JupyterHub</a><span class="muted"> Often used together. Shared: Computer Science, Computing, Grades 9-12.</span></li><li><a href="classroom-manager-for-jupyterhub-jupyter-classroom.html">Classroom Manager for JupyterHub (jupyter-classroom)</a><span class="muted"> Shared: Computer Science, Computing, Grades 9-12.</span></li><li><a href="netsblox.html">NetsBlox</a><span class="muted"> Shared: Computer Science, Computing, Grades 9-12.</span></li><li><a href="dodona.html">Dodona</a><span class="muted"> Shared: Computer Science, Computing, Grades 9-12.</span></li><li><a href="code-freak.html">Code FREAK</a><span class="muted"> Shared: Computer Science, Computing, Grades 9-12.</span></li><li><a href="internet-in-a-box-jupyterhub-role.html">Internet-in-a-Box JupyterHub role</a><span class="muted"> Shared: Computer Science, Computing, Grades 9-12.</span></li></ul></section>
+    </div>
+    <aside class="tool-side" aria-label="Quick facts">
+      <h2>Quick facts</h2>
+      <table class="facts"><tbody><tr><th scope="row">Made by</th><td>Project Jupyter</td></tr><tr><th scope="row">Type</th><td>School platform</td></tr><tr><th scope="row">Cost</th><td>Free<br><span class="muted">The software is free. A Berkeley guide estimates about 130 to 170 USD per month of cloud cost for a class of roughly 30 to 50 students.</span></td></tr><tr><th scope="row">Grades</th><td>Grades 9-12</td></tr><tr><th scope="row">Works on</th><td>Web browser</td></tr><tr><th scope="row">Student data</th><td><span class="badge priv-blue">Stays on a school server</span></td></tr><tr><th scope="row">Internet</th><td>Unverified</td></tr><tr><th scope="row">Youngest users</th><td>Unknown</td></tr><tr><th scope="row">Ease for students*</th><td>Moderate</td></tr><tr><th scope="row">Teacher learning curve*</th><td>Advanced</td></tr><tr><th scope="row">Setup time*</th><td>A day or more</td></tr><tr><th scope="row">IT help*</th><td>Needs a server admin</td></tr><tr><th scope="row">Open source</th><td>Open-source software</td></tr><tr><th scope="row">Updates</th><td>Actively updated</td></tr><tr><th scope="row">Classroom evidence</th><td>Documented classroom use</td></tr></tbody></table>
+      <h2>More information</h2><ul class='links'><li><a href="https://tljh.jupyter.org" rel="noopener noreferrer">Official site</a></li><li><a href="https://tljh.jupyter.org/en/latest/topic/requirements.html" rel="noopener noreferrer">Requirements</a></li><li><a href="https://tljh.jupyter.org/en/latest/topic/authenticator-configuration.html" rel="noopener noreferrer">Authenticators</a></li><li><a href="https://github.com/jupyterhub/the-littlest-jupyterhub" rel="noopener noreferrer">GitHub</a></li></ul>
+      <details class="sources"><summary>Sources used for this page</summary><ul><li><a href="https://tljh.jupyter.org" rel="noopener noreferrer">tljh.jupyter.org</a> <span class="muted">checked 2026-11-19</span></li><li><a href="https://tljh.jupyter.org/en/latest/topic/requirements.html" rel="noopener noreferrer">tljh.jupyter.org/en/latest/topic/requirements.html</a> <span class="muted">checked 2026-11-19</span></li><li><a href="https://tljh.jupyter.org/en/latest/topic/authenticator-configuration.html" rel="noopener noreferrer">tljh.jupyter.org/en/latest/topic/authenticator-configuration.html</a> <span class="muted">checked 2026-11-19</span></li><li><a href="https://cdss.berkeley.edu/choosing-right-jupyterhub-infrastructure" rel="noopener noreferrer">cdss.berkeley.edu/choosing-right-jupyterhub-infrastructure</a> <span class="muted">checked 2026-11-19</span></li><li><a href="https://github.com/jupyterhub/the-littlest-jupyterhub" rel="noopener noreferrer">github.com/jupyterhub/the-littlest-jupyterhub</a> <span class="muted">checked 2026-11-19</span></li></ul></details>
+      <p class="muted small">* Our estimate from a scoring rubric, based on the research notes. Your experience may differ.</p>
+      <p class="muted small">Classified on 2026-11-19. Details can change. Check with the provider.</p>
+    </aside>
+  </div>
+</div>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <p>An AI-assisted experiment by Jeremy Riel, PhD, UIC TRAILblazer Lab. Some content was written with generative AI and may contain errors. Check details with each provider before use.</p>
+    <p><a href="../about.html">About this project</a> · <a href="../why.html">Why Use Free AI?</a></p>
+  </div>
+</footer>
+</body>
+</html>

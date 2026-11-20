@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'; connect-src 'self'">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<title>Kokoro TTS | Free AI Explorer</title>
+<meta name="description" content="A small open-weight text-to-speech model with 54 voices that runs on a CPU.">
+<link rel="stylesheet" href="../assets/css/site.css?v=5082ebcb03">
+<link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
+<script src="../assets/js/common.js?v=5082ebcb03" defer></script><script src="../assets/js/tool.js?v=5082ebcb03" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="../index.html"><svg class="brand-icon" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false"><path d="M9 4h6v3H9zM6 7h12v11H6zM9 11h.01M15 11h.01M9 15h6M12 2v2M3 11v3M21 11v3" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Free AI Explorer</span></a>
+    <nav aria-label="Main"><ul class="nav"><li><a href="../index.html">Explore</a></li><li><a href="../why.html">Why Use Free AI?</a></li><li><a href="../mylist.html">My List <span class="count" data-list-count></span></a></li><li><a href="../about.html">About</a></li></ul></nav>
+  </div>
+</header>
+<main id="main" tabindex="-1">
+
+<div class="wrap tool">
+  <p class="crumbs"><a href="../index.html">Explore</a> <span aria-hidden="true">›</span> <span>Kokoro TTS</span></p>
+  <div class="tool-head">
+    <div class="tool-figure placeholder" aria-hidden="true"><svg class="big-icon" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false"><path d="M12 3l8 4.5v9L12 21l-8-4.5v-9zM12 12l8-4.5M12 12v9M12 12L4 7.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+    <div class="tool-title">
+      <h1>Kokoro TTS</h1>
+      <p class="tagline">A small open-weight text-to-speech model with 54 voices that runs on a CPU.</p>
+      <div class="chips"><span class="chip"><svg class="chip-icon" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false"><path d="M9 4h6v3H9zM6 7h12v11H6zM9 11h.01M15 11h.01M9 15h6M12 2v2M3 11v3M21 11v3" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>AI</span></div>
+      <div class="actions"><button type="button" class="star-btn" data-star="kokoro-tts" data-name="Kokoro TTS" aria-pressed="false"><svg class="star-icon" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false"><path d="M12 3l2.8 5.7 6.2.9-4.5 4.4 1 6.2L12 17.3 6.5 20.2l1-6.2L3 9.6l6.2-.9z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="star-label">Add to My List</span></button></div>
+      
+      
+    </div>
+  </div>
+  
+  <div class="tool-grid">
+    <div class="tool-main">
+      <section class="tool-section " aria-labelledby="h-overview"><h2 id="h-overview">Overview</h2><p>Kokoro is an open-weight text-to-speech model with 82 million parameters. Version 1.0 supports 8 languages and 54 voices. It is released under Apache 2.0. Users run it through a Python package or a community container that offers an OpenAI-compatible speech API.</p></section>
+      <section class="tool-section" aria-labelledby="h-benefits"><h2 id="h-benefits">Benefits</h2><div class="benefits"><div class="benefit"><h3>For students</h3><ul>
+<li>Advanced students turn text into spoken audio with code.</li>
+<li>Students can choose among many voices.</li>
+<li>Students can hear text in several languages.</li>
+</ul></div><div class="benefit"><h3>For teachers</h3><ul>
+<li>The model runs on a CPU.</li>
+<li>A Python package makes a short demo script.</li>
+<li>A third party article measured a short paragraph in 1.5 to 4.7 seconds on CPUs.</li>
+</ul></div><div class="benefit"><h3>For schools</h3><ul>
+<li>The weights are free under Apache 2.0.</li>
+<li>The container image is about 5 GB.</li>
+<li>It is a developer tool and needs a teacher or IT person who is comfortable with Python or containers.</li>
+</ul></div></div></section>
+      <section class="tool-section checklist-section" aria-labelledby="h-getting-started"><h2 id="h-getting-started">Getting started checklist</h2><ul class="checklist">
+<li><input type="checkbox" id="chk-1"> <label for="chk-1">Find the Kokoro model page and read the license.</label></li>
+<li><input type="checkbox" id="chk-2"> <label for="chk-2">Ask IT for a server admin to help with setup.</label></li>
+<li><input type="checkbox" id="chk-3"> <label for="chk-3">Install the kokoro Python package with soundfile and espeak-ng.</label></li>
+<li><input type="checkbox" id="chk-4"> <label for="chk-4">Or run the Kokoro-FastAPI container with Docker or Podman.</label></li>
+<li><input type="checkbox" id="chk-5"> <label for="chk-5">Download the weights while online.</label></li>
+<li><input type="checkbox" id="chk-6"> <label for="chk-6">Go offline and make a short audio clip.</label></li>
+<li><input type="checkbox" id="chk-7"> <label for="chk-7">Listen to several voices and pick a few for class.</label></li>
+</ul></section>
+      <section class="tool-section " aria-labelledby="h-where-is-the-ai"><h2 id="h-where-is-the-ai">Where is the AI in this product?</h2><p>The AI is a text-to-speech model that uses a StyleTTS 2 and ISTFTNet design. It runs on the local computer or a school server. Students write text, run the code, and listen to the speech. They then change the text or voice to improve the result.</p></section>
+      <section class="tool-section " aria-labelledby="h-privacy-and-safety"><h2 id="h-privacy-and-safety">Privacy and safety</h2><p>No account is needed, and the model runs locally. Downloading the package, container image, and weights needs network access at first. Fully offline use after download is not stated outright. The model card warns that sites with kokoro in the domain are not affiliated and are likely scams. A teacher should review the text that students convert to speech. A teacher should also tell students not to copy a real person's voice style without permission.</p></section>
+      <section class="tool-section" aria-labelledby="h-ideas"><h2 id="h-ideas">Ideas by subject</h2><p class="muted">Select a subject to see five classroom ideas.</p><div class="subjects"><details class="subject"><summary><svg class="subject-icon" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false"><path d="M8 8l-4 4 4 4M16 8l4 4-4 4M14 5l-4 14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>How this can be used for Computer Science</span></summary><div class="subject-body"><ol>
+<li>Write a Python script that turns a sentence into audio.</li>
+<li>Compare two voices on the same text and describe the differences.</li>
+<li>Time how long a paragraph takes on your computer.</li>
+<li>Test how the model reads numbers and abbreviations.</li>
+<li>Explain how text becomes sound in a few steps.</li>
+</ol></div></details></div></section>
+      <section class="tool-section" aria-labelledby="h-related"><h2 id="h-related">Related products</h2><ul class="related"><li><a href="coqui-tts.html">Coqui TTS</a><span class="muted"> Shared: Computer Science, AI, Grades 9-12.</span></li><li><a href="whisperfile.html">whisperfile</a><span class="muted"> Shared: Computer Science, AI, Grades 9-12.</span></li><li><a href="whisper-cpp.html">Whisper.cpp</a><span class="muted"> Shared: Computer Science, AI, Grades 9-12.</span></li><li><a href="llamafile.html">llamafile</a><span class="muted"> Shared: Computer Science, AI, Grades 9-12.</span></li><li><a href="vosk.html">Vosk</a><span class="muted"> Shared: Computer Science, AI, Grades 9-12.</span></li><li><a href="microsoft-foundry-local.html">Microsoft Foundry Local</a><span class="muted"> Shared: Computer Science, AI, Grades 9-12.</span></li></ul></section>
+    </div>
+    <aside class="tool-side" aria-label="Quick facts">
+      <h2>Quick facts</h2>
+      <table class="facts"><tbody><tr><th scope="row">Made by</th><td>hexgrad</td></tr><tr><th scope="row">Type</th><td>AI model or runtime</td></tr><tr><th scope="row">Cost</th><td>Free<br><span class="muted">Free.</span></td></tr><tr><th scope="row">Grades</th><td>Grades 9-12</td></tr><tr><th scope="row">AI features</th><td>Speech and sound</td></tr><tr><th scope="row">Works on</th><td>Windows, Mac, Linux</td></tr><tr><th scope="row">Student data</th><td><span class="badge priv-green">Stays on the device</span></td></tr><tr><th scope="row">Internet</th><td>Only for setup</td></tr><tr><th scope="row">Youngest users</th><td>No age limit found</td></tr><tr><th scope="row">Ease for students*</th><td>Advanced</td></tr><tr><th scope="row">Teacher learning curve*</th><td>Advanced</td></tr><tr><th scope="row">Setup time*</th><td>A day or more</td></tr><tr><th scope="row">IT help*</th><td>Needs a server admin</td></tr><tr><th scope="row">Open source</th><td>Open-source software</td></tr><tr><th scope="row">Updates</th><td>Updated slowly</td></tr><tr><th scope="row">Classroom evidence</th><td>Undocumented</td></tr></tbody></table>
+      <h2>More information</h2><ul class='links'><li><a href="https://huggingface.co/hexgrad/Kokoro-82M" rel="noopener noreferrer">Official site</a></li><li><a href="https://github.com/hexgrad/kokoro" rel="noopener noreferrer">Kokoro on GitHub</a></li><li><a href="https://ariya.io/2026/03/local-cpu-friendly-high-quality-tts-text-to-speech-with-kokoro" rel="noopener noreferrer">Local CPU article</a></li></ul>
+      <details class="sources"><summary>Sources used for this page</summary><ul><li><a href="https://huggingface.co/hexgrad/Kokoro-82M" rel="noopener noreferrer">huggingface.co/hexgrad/Kokoro-82M</a> <span class="muted">checked 2026-11-19</span></li><li><a href="https://ariya.io/2026/03/local-cpu-friendly-high-quality-tts-text-to-speech-with-kokoro" rel="noopener noreferrer">ariya.io/2026/03/local-cpu-friendly-high-quality-tts-text-to-speech-wi</a> <span class="muted">checked 2026-11-19</span></li></ul></details>
+      <p class="muted small">* Our estimate from a scoring rubric, based on the research notes. Your experience may differ.</p>
+      <p class="muted small">Classified on 2026-11-19. Details can change. Check with the provider.</p>
+    </aside>
+  </div>
+</div>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <p>An AI-assisted experiment by Jeremy Riel, PhD, UIC TRAILblazer Lab. Some content was written with generative AI and may contain errors. Check details with each provider before use.</p>
+    <p><a href="../about.html">About this project</a> · <a href="../why.html">Why Use Free AI?</a></p>
+  </div>
+</footer>
+</body>
+</html>

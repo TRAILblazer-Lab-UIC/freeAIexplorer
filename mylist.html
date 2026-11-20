@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'; connect-src 'self'">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<title>My List | Free AI Explorer</title>
+<meta name="description" content="Find free, local, and privacy-friendly AI, computing, and robotics tools for K-12 classrooms.">
+<link rel="stylesheet" href="assets/css/site.css?v=5082ebcb03">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<script src="assets/js/common.js?v=5082ebcb03" defer></script><script src="assets/js/mylist.js?v=5082ebcb03" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="index.html"><svg class="brand-icon" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false"><path d="M9 4h6v3H9zM6 7h12v11H6zM9 11h.01M15 11h.01M9 15h6M12 2v2M3 11v3M21 11v3" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Free AI Explorer</span></a>
+    <nav aria-label="Main"><ul class="nav"><li><a href="index.html">Explore</a></li><li><a href="why.html">Why Use Free AI?</a></li><li><a href="mylist.html" aria-current="page">My List <span class="count" data-list-count></span></a></li><li><a href="about.html">About</a></li></ul></nav>
+  </div>
+</header>
+<main id="main" tabindex="-1">
+<div class="wrap mylist">
+  <h1>My List</h1>
+  <p class="lead">Your saved tools live in this browser only. Nothing is sent anywhere. Use the buttons to print a "Try It Out" plan or save a copy.</p>
+  <div class="list-actions" role="group" aria-label="My List actions">
+    <button type="button" class="btn" id="print-list">Print or save as PDF</button>
+    <button type="button" class="btn" id="dl-md">Download a Markdown file</button>
+    <button type="button" class="btn" id="dl-csv">Download a CSV spreadsheet</button>
+    <button type="button" class="btn" id="copy-link">Copy a share link</button>
+    <button type="button" class="btn btn-quiet" id="clear-list">Clear my list</button>
+  </div>
+  <p id="list-status" role="status" aria-live="polite"></p>
+  <div id="shared-banner" class="notice" hidden>
+    <p>Someone shared this list with you.</p>
+    <button type="button" class="btn" id="keep-shared">Save these to my list</button>
+  </div>
+  <div id="list-empty" hidden>
+    <p>Your list is empty. Select the star on any tool to save it here.</p>
+    <p><a href="index.html">Explore tools</a></p>
+  </div>
+  <section aria-labelledby="plan-heading">
+    <h2 id="plan-heading" class="print-only">Try It Out plan</h2>
+    <ol id="list-items" class="plan"></ol>
+  </section>
+</div>
+<template id="plan-tpl">
+  <li class="plan-item">
+    <div class="plan-head">
+      <h2 class="plan-title"><a></a></h2>
+      <button type="button" class="link-btn remove-btn">Remove</button>
+    </div>
+    <p class="plan-tagline"></p>
+    <p class="plan-meta"></p>
+    <h3>Try it out</h3>
+    <ul class="checklist plan-steps"></ul>
+    <p class="plan-url"></p>
+  </li>
+</template>
+
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <p>An AI-assisted experiment by Jeremy Riel, PhD, UIC TRAILblazer Lab. Some content was written with generative AI and may contain errors. Check details with each provider before use.</p>
+    <p><a href="about.html">About this project</a> · <a href="why.html">Why Use Free AI?</a></p>
+  </div>
+</footer>
+</body>
+</html>

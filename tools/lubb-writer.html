@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'; connect-src 'self'">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<title>Lubb Writer | Free AI Explorer</title>
+<meta name="description" content="A browser extension that rewrites, summarizes, or fixes selected text with AI.">
+<link rel="stylesheet" href="../assets/css/site.css?v=5082ebcb03">
+<link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
+<script src="../assets/js/common.js?v=5082ebcb03" defer></script><script src="../assets/js/tool.js?v=5082ebcb03" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="../index.html"><svg class="brand-icon" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false"><path d="M9 4h6v3H9zM6 7h12v11H6zM9 11h.01M15 11h.01M9 15h6M12 2v2M3 11v3M21 11v3" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Free AI Explorer</span></a>
+    <nav aria-label="Main"><ul class="nav"><li><a href="../index.html">Explore</a></li><li><a href="../why.html">Why Use Free AI?</a></li><li><a href="../mylist.html">My List <span class="count" data-list-count></span></a></li><li><a href="../about.html">About</a></li></ul></nav>
+  </div>
+</header>
+<main id="main" tabindex="-1">
+
+<div class="wrap tool">
+  <p class="crumbs"><a href="../index.html">Explore</a> <span aria-hidden="true">›</span> <span>Lubb Writer</span></p>
+  <div class="tool-head">
+    <div class="tool-figure placeholder" aria-hidden="true"><svg class="big-icon" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false"><path d="M4 5h16v14H4zM4 9h16M8 13l2 2-2 2M12 17h4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+    <div class="tool-title">
+      <h1>Lubb Writer</h1>
+      <p class="tagline">A browser extension that rewrites, summarizes, or fixes selected text with AI.</p>
+      <div class="chips"><span class="chip"><svg class="chip-icon" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false"><path d="M9 4h6v3H9zM6 7h12v11H6zM9 11h.01M15 11h.01M9 15h6M12 2v2M3 11v3M21 11v3" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>AI</span></div>
+      <div class="actions"><button type="button" class="star-btn" data-star="lubb-writer" data-name="Lubb Writer" aria-pressed="false"><svg class="star-icon" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false"><path d="M12 3l2.8 5.7 6.2.9-4.5 4.4 1 6.2L12 17.3 6.5 20.2l1-6.2L3 9.6l6.2-.9z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="star-label">Add to My List</span></button></div>
+      
+      
+    </div>
+  </div>
+  
+  <div class="tool-grid">
+    <div class="tool-main">
+      <section class="tool-section " aria-labelledby="h-overview"><h2 id="h-overview">Overview</h2><p>Lubb Writer is an open source writing tool made of a browser extension and a REST API. Users select text on a web page and apply one of 13 modes such as rewrite, summarize, grammar, formal, academic, or creative. The API sends the text to a chosen provider. It is a small one-developer project.</p></section>
+      <section class="tool-section" aria-labelledby="h-benefits"><h2 id="h-benefits">Benefits</h2><div class="benefits"><div class="benefit"><h3>For students</h3><ul>
+<li>Students can check grammar and tone on text they select.</li>
+<li>Students can compare formal and creative versions of a sentence.</li>
+<li>Students can summarize a long passage.</li>
+</ul></div><div class="benefit"><h3>For teachers</h3><ul>
+<li>Thirteen modes give many ways to model revision.</li>
+<li>The extension works in Chrome, Firefox, Edge, and Brave.</li>
+<li>Teachers can choose a local provider such as Ollama.</li>
+</ul></div><div class="benefit"><h3>For schools</h3><ul>
+<li>The tool is free. Cloud provider keys carry their own costs.</li>
+<li>Self-hosting the API with Docker keeps text on a school server.</li>
+<li>IT will likely need to set up and review the API.</li>
+</ul></div></div></section>
+      <section class="tool-section checklist-section" aria-labelledby="h-getting-started"><h2 id="h-getting-started">Getting started checklist</h2><ul class="checklist">
+<li><input type="checkbox" id="chk-1"> <label for="chk-1">Find Lubb Writer in its repository and read the README.</label></li>
+<li><input type="checkbox" id="chk-2"> <label for="chk-2">Ask IT to review the extension and the API.</label></li>
+<li><input type="checkbox" id="chk-3"> <label for="chk-3">Install the extension from the Chrome or Firefox store. The Edge listing was marked coming soon.</label></li>
+<li><input type="checkbox" id="chk-4"> <label for="chk-4">Self-host the API with Node 18 or newer and Yarn or Docker.</label></li>
+<li><input type="checkbox" id="chk-5"> <label for="chk-5">Enter provider API keys, or point it at a local Ollama.</label></li>
+<li><input type="checkbox" id="chk-6"> <label for="chk-6">Test the modes with a short sample paragraph.</label></li>
+<li><input type="checkbox" id="chk-7"> <label for="chk-7">Set a rule for what text students may select.</label></li>
+</ul></section>
+      <section class="tool-section " aria-labelledby="h-where-is-the-ai"><h2 id="h-where-is-the-ai">Where is the AI in this product?</h2><p>The AI is a language model from whichever provider is configured. Providers include OpenAI, Claude, Gemini, and local tools such as Ollama and LM Studio. The extension runs in the browser and the API runs on a school server or elsewhere. Students select text and apply a mode, then edit the result themselves.</p></section>
+      <section class="tool-section " aria-labelledby="h-privacy-and-safety"><h2 id="h-privacy-and-safety">Privacy and safety</h2><p>The materials do not state whether accounts are needed or how often the internet is used. The extension sends selected text to a REST API, which calls the chosen provider. With a cloud provider the text goes to that provider. The research did not confirm whether the project's own hosted API is used by default. The research read no privacy policy. Pairing it with a local Ollama and a self hosted API could keep text on school systems. A teacher should check the provider setting before students use it.</p></section>
+      <section class="tool-section" aria-labelledby="h-ideas"><h2 id="h-ideas">Ideas by subject</h2><p class="muted">Select a subject to see five classroom ideas.</p><div class="subjects"><details class="subject"><summary><svg class="subject-icon" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false"><path d="M4 5h7a3 3 0 0 1 3 3v11a2 2 0 0 0-2-2H4zM20 5h-4a2 2 0 0 0-2 2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>How this can be used for English and Language Arts</span></summary><div class="subject-body"><ol>
+<li>Write a paragraph, apply the grammar mode, and list each change you accept.</li>
+<li>Rewrite a sentence in formal, academic, and creative modes and compare them.</li>
+<li>Summarize a news article and check that the summary keeps the main idea.</li>
+<li>Pick a weak sentence and revise it by hand before using any mode.</li>
+<li>Write a short note on which changes improved your writing and which did not.</li>
+</ol></div></details></div></section>
+      <section class="tool-section" aria-labelledby="h-related"><h2 id="h-related">Related products</h2><ul class="related"><li><a href="page-assist.html">Page Assist</a><span class="muted"> Shared: English and Language Arts, AI, Grades 9-12.</span></li><li><a href="opengrammar.html">OpenGrammar</a><span class="muted"> Shared: English and Language Arts, AI, Grades 6-8, Grades 9-12.</span></li><li><a href="obsidian-local-gpt-plugin.html">Obsidian Local GPT plugin</a><span class="muted"> Shared: English and Language Arts, AI, Grades 9-12.</span></li><li><a href="checkr.html">Checkr</a><span class="muted"> Shared: English and Language Arts, AI, Grades 6-8, Grades 9-12.</span></li><li><a href="moodle-ai-subsystem-with-ollama-provider.html">Moodle AI subsystem with Ollama provider</a><span class="muted"> Shared: English and Language Arts, AI, Grades 6-8, Grades 9-12.</span></li><li><a href="open-webui-desktop.html">Open WebUI Desktop</a><span class="muted"> Shared: English and Language Arts, AI, Grades 6-8, Grades 9-12.</span></li></ul></section>
+    </div>
+    <aside class="tool-side" aria-label="Quick facts">
+      <h2>Quick facts</h2>
+      <table class="facts"><tbody><tr><th scope="row">Made by</th><td>Adel Benyahia</td></tr><tr><th scope="row">Type</th><td>Software</td></tr><tr><th scope="row">Cost</th><td>Free<br><span class="muted">Free. Cloud provider API keys carry their own costs.</span></td></tr><tr><th scope="row">Grades</th><td>Grades 6-8, Grades 9-12</td></tr><tr><th scope="row">AI features</th><td>Writes and chats</td></tr><tr><th scope="row">Works on</th><td>Web browser</td></tr><tr><th scope="row">Student data</th><td><span class="badge priv-yellow">Local with optional cloud or accounts</span></td></tr><tr><th scope="row">Internet</th><td>Unverified</td></tr><tr><th scope="row">Youngest users</th><td>Unknown</td></tr><tr><th scope="row">Ease for students*</th><td>Easy</td></tr><tr><th scope="row">Teacher learning curve*</th><td>Moderate</td></tr><tr><th scope="row">Setup time*</th><td>About an hour</td></tr><tr><th scope="row">IT help*</th><td>Needs a server admin</td></tr><tr><th scope="row">Open source</th><td>Open-source software</td></tr><tr><th scope="row">Updates</th><td>Actively updated</td></tr><tr><th scope="row">Classroom evidence</th><td>Undocumented</td></tr></tbody></table>
+      <h2>More information</h2><ul class='links'><li><a href="https://peerlist.io/adelpro/project/lubb-writer" rel="noopener noreferrer">Official site</a></li><li><a href="https://github.com/adelpro/lubb-writer" rel="noopener noreferrer">GitHub</a></li><li><a href="https://chromewebstore.google.com/detail/lubb-ai-writer/hbdghnimecpnpoomobaeeeeekleanjjo" rel="noopener noreferrer">Chrome Web Store listing</a></li></ul>
+      <details class="sources"><summary>Sources used for this page</summary><ul><li><a href="https://github.com/adelpro/lubb-writer" rel="noopener noreferrer">github.com/adelpro/lubb-writer</a> <span class="muted">checked 2026-11-19</span></li><li><a href="https://peerlist.io/adelpro/project/lubb-writer" rel="noopener noreferrer">peerlist.io/adelpro/project/lubb-writer</a> <span class="muted">checked 2026-11-19</span></li><li><a href="https://chromewebstore.google.com/detail/lubb-ai-writer/hbdghnimecpnpoomobaeeeeekleanjjo" rel="noopener noreferrer">chromewebstore.google.com/detail/lubb-ai-writer/hbdghnimecpnpoomobaeee</a> <span class="muted">checked 2026-11-19</span></li></ul></details>
+      <p class="muted small">* Our estimate from a scoring rubric, based on the research notes. Your experience may differ.</p>
+      <p class="muted small">Classified on 2026-11-19. Details can change. Check with the provider.</p>
+    </aside>
+  </div>
+</div>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <p>An AI-assisted experiment by Jeremy Riel, PhD, UIC TRAILblazer Lab. Some content was written with generative AI and may contain errors. Check details with each provider before use.</p>
+    <p><a href="../about.html">About this project</a> · <a href="../why.html">Why Use Free AI?</a></p>
+  </div>
+</footer>
+</body>
+</html>
