@@ -554,3 +554,5 @@ body { line-height: 1.65; }
 
 .brand-sub { font-weight: 500; font-size: .85em; opacity: .9; }
 @media (max-width: 480px) { .brand-sub { display: block; font-size: .75em; line-height: 1.1; } }
+
+.tool-head.no-figure { grid-template-columns: 1fr; }
