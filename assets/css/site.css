@@ -1,4 +1,4 @@
-/* Homegrown AI. System fonts only. All color pairs meet WCAG 2.1 AA (4.5:1 text, 3:1 UI). */
+/* Local AI Field Guide. System fonts only. All color pairs meet WCAG 2.1 AA (4.5:1 text, 3:1 UI). */
 :root {
   --bg: #ffffff;
   --surface: #f4f7f8;
@@ -551,3 +551,6 @@ body { line-height: 1.65; }
   .hero-visual { order: -1; justify-content: center; }
   .hero-art { max-width: 200px; }
 }
+
+.brand-sub { font-weight: 500; font-size: .85em; opacity: .9; }
+@media (max-width: 480px) { .brand-sub { display: block; font-size: .75em; line-height: 1.1; } }

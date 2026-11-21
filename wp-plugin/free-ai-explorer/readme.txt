@@ -1,4 +1,4 @@
-=== Homegrown AI Embed ===
+=== Local AI Field Guide Embed ===
 Contributors: trailblazerlab
 Tags: education, ai, embed, iframe
 Requires at least: 5.8
@@ -6,7 +6,7 @@ Tested up to: 6.7
 Stable tag: 1.0.0
 License: GPLv2 or later
 
-Embed the Homegrown AI static site in any page.
+Embed the Local AI Field Guide static site in any page.
 
 == Usage ==
 1. Upload the free-ai-explorer folder to wp-content/plugins and activate it.

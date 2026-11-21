@@ -1,4 +1,4 @@
-# Homegrown AI
+# Local AI Field Guide
 
 A static explorer of free, local, and privacy-friendly AI and computing tools for K-12 teachers of every subject.
 An AI-assisted experiment by Jeremy Riel, PhD, UIC TRAILblazer Lab (https://www.trailblazerlab.org).

@@ -1,4 +1,4 @@
-/* Homegrown AI embed: resize iframes from height messages. Messages are accepted only from the iframe's own origin and window. */
+/* Local AI Field Guide embed: resize iframes from height messages. Messages are accepted only from the iframe's own origin and window. */
 (function () {
   'use strict';
   window.addEventListener('message', function (e) {

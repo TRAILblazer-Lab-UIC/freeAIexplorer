@@ -1,4 +1,4 @@
-/* Homegrown AI: shared helpers. My List storage, star buttons, list count, and iframe auto-height.
+/* Local AI Field Guide: shared helpers. My List storage, star buttons, list count, and iframe auto-height.
    No network calls except same-origin data files. All DOM text is set with textContent. */
 (function () {
   'use strict';
